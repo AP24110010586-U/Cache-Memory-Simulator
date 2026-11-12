@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cache Memory Simulator - Academic Project Report</title>
+  <style>
+    @page { size: A4; margin: 25mm 20mm; }
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 12pt;
+      line-height: 1.6;
+      color: #111;
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    h1, h2, h3, h4 { font-family: 'Segoe UI', Arial, sans-serif; color: #1e3a8a; }
+    h1 { font-size: 24pt; text-align: center; margin-top: 30px; margin-bottom: 10px; }
+    h2 { font-size: 16pt; border-bottom: 2px solid #1e3a8a; padding-bottom: 4px; margin-top: 35px; }
+    h3 { font-size: 13pt; color: #4338ca; margin-top: 20px; }
+    .title-page {
+      text-align: center;
+      padding: 60px 20px 40px;
+      border: 3px double #1e3a8a;
+      margin-bottom: 50px;
+      page-break-after: always;
+    }
+    .title-sub { font-size: 16pt; color: #4338ca; margin-bottom: 30px; }
+    .title-meta { margin: 40px auto; max-width: 500px; text-align: left; font-size: 12pt; line-height: 1.8; }
+    .page-break { page-break-after: always; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 10pt; }
+    th, td { border: 1px solid #cbd5e1; padding: 8px 10px; text-align: left; }
+    th { background: #f1f5f9; font-weight: bold; color: #1e293b; }
+    pre, code { font-family: 'Courier New', Courier, monospace; background: #f8fafc; }
+    pre { padding: 12px; border: 1px solid #e2e8f0; border-radius: 4px; overflow-x: auto; font-size: 9.5pt; }
+    code { padding: 2px 4px; border-radius: 3px; }
+    .hit { color: #15803d; font-weight: bold; }
+    .miss { color: #b91c1c; font-weight: bold; }
+    .replace { color: #b45309; font-weight: bold; }
+    .box { background: #eff6ff; border-left: 4px solid #3b82f6; padding: 12px 16px; margin: 15px 0; }
+  </style>
+</head>
+<body>
+
+<div class="title-page">
+  <div style="font-size: 14pt; letter-spacing: 2px; color: #64748b; font-weight: bold; margin-bottom: 15px;">A B.TECH ACADEMIC PROJECT REPORT</div>
+  <h1>CACHE MEMORY SIMULATOR</h1>
+  <div class="title-sub">Computer Organization and Architecture (COA)</div>
+  <p><em>An Interactive Simulation Engine & Educational Tool for Cache Mapping, Replacement Policies, and Address Decomposition</em></p>
+  
+  <div class="title-meta">
+    <table style="border: none;">
+      <tr><td style="border:none; width: 45%;"><strong>Program:</strong></td><td style="border:none;">B.Tech Computer Science & Engineering</td></tr>
+      <tr><td style="border:none;"><strong>Student Name:</strong></td><td style="border:none;">[Your Name Here]</td></tr>
+      <tr><td style="border:none;"><strong>Roll Number:</strong></td><td style="border:none;">[Your Roll Number]</td></tr>
+      <tr><td style="border:none;"><strong>Institution:</strong></td><td style="border:none;">[Your Institution Name]</td></tr>
+      <tr><td style="border:none;"><strong>Faculty Guide:</strong></td><td style="border:none;">[Faculty Guide Name]</td></tr>
+      <tr><td style="border:none;"><strong>Academic Year:</strong></td><td style="border:none;">2024 &ndash; 2025</td></tr>
+    </table>
+  </div>
+
+  <div style="margin-top: 50px; font-size: 11pt; color: #64748b;">
+    Department of Computer Science and Engineering<br>
+    [College / University Name]
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<h2>Certificate & Declaration</h2>
+<p><strong>Declaration:</strong> I hereby declare that this project report entitled <strong>"Cache Memory Simulator"</strong> submitted for the award of Bachelor of Technology in Computer Science & Engineering represents genuine, original work done by me under the guidance of the faculty.</p>
+<br>
+<div style="display:flex; justify-content:space-between; margin-top: 30px;">
+  <div>
+    <strong>Student Signature:</strong> _______________________<br>
+    <strong>Name:</strong> [Student Name]<br>
+    <strong>Roll No:</strong> [Roll Number]
+  </div>
+  <div style="text-align: right;">
+    <strong>Guide Signature:</strong> _______________________<br>
+    <strong>Faculty Guide:</strong> [Faculty Name]<br>
+    <strong>Designation:</strong> Department of CSE
+  </div>
+</div>
+
+<h2>Abstract</h2>
+<p>In modern computer systems, the performance of microprocessors is largely constrained by the memory wall—the latency disparity between processor registers and dynamic random-access memory (DRAM). Cache memory mitigates this bottleneck by exploiting temporal and spatial locality. This project presents a full-featured, academic <strong>Cache Memory Simulator</strong> engineered with a C++17 algorithmic core, an asynchronous Python Flask REST backend, and a modern single-page browser frontend.</p>
+<p>The system accurately implements <strong>Direct Mapping</strong>, <strong>Fully Associative Mapping</strong>, and <strong>N-Way Set Associative Mapping</strong>, paired with <strong>FIFO</strong> and <strong>LRU</strong> eviction policies. It features comprehensive 32-bit address decomposition into Tag, Index/Set, and Block Offset fields, dynamic performance metrics calculation, step-by-step state reconstruction, and 90 automated validation tests.</p>
+
+<div class="page-break"></div>
+
+<h2>1. Introduction & Theoretical Foundations</h2>
+<h3>1.1 Memory Hierarchy</h3>
+<p>Computer memory is organized hierarchically to balance high speed and low storage cost per bit:</p>
+<ul>
+  <li><strong>Registers:</strong> Inside CPU, single-cycle access latency (&lt; 0.5 ns), capacity &lt; 1 KB.</li>
+  <li><strong>L1 Cache:</strong> On-core SRAM, ~1 ns latency, capacity 32&ndash;64 KB.</li>
+  <li><strong>L2 Cache:</strong> Dedicated per-core SRAM, ~4&ndash;10 ns latency, capacity 256 KB&ndash;4 MB.</li>
+  <li><strong>L3 Cache:</strong> Shared multicore SRAM, ~20&ndash;40 ns latency, capacity 8&ndash;64 MB.</li>
+  <li><strong>Main Memory (DRAM):</strong> Synchronous DRAM, ~60&ndash;100 ns latency, capacity 8&ndash;128 GB.</li>
+  <li><strong>Secondary Storage:</strong> NVMe SSD / HDD, latency in microseconds to milliseconds.</li>
+</ul>
+
+<h3>1.2 Locality of Reference</h3>
+<p>The efficacy of caching relies on two empirical behavioral properties of computer programs:</p>
+<div class="box">
+  <strong>Temporal Locality:</strong> A memory address referenced at time <em>t</em> is likely to be referenced again in the near future (e.g., loop counters, hot functions).<br>
+  <strong>Spatial Locality:</strong> If memory address <em>A</em> is referenced, adjacent addresses (<em>A + 1, A + 2, ...</em>) will likely be referenced soon (e.g., sequential instruction execution, array traversal).
+</div>
+
+<h2>2. Cache Organization & Mapping Schemes</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Scheme</th>
+      <th>Block Placement Rule</th>
+      <th>Tag Bits</th>
+      <th>Index Bits</th>
+      <th>Offset Bits</th>
+      <th>Conflict Misses</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Direct Mapping</strong></td>
+      <td>Line = Block % Num_Lines</td>
+      <td>32 - log2(Lines) - log2(Block)</td>
+      <td>log2(Lines)</td>
+      <td>log2(Block)</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <td><strong>Fully Associative</strong></td>
+      <td>Any Line</td>
+      <td>32 - log2(Block)</td>
+      <td>None (0 bits)</td>
+      <td>log2(Block)</td>
+      <td>Zero</td>
+    </tr>
+    <tr>
+      <td><strong>Set Associative</strong></td>
+      <td>Set = Block % Num_Sets</td>
+      <td>32 - log2(Sets) - log2(Block)</td>
+      <td>log2(Sets)</td>
+      <td>log2(Block)</td>
+      <td>Low to Moderate</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="page-break"></div>
+
+<h2>3. Step-by-Step Verification: Sample Demonstration 1</h2>
+<p><strong>Configuration:</strong> Main Memory = 256 Bytes | Cache Size = 64 Bytes | Block Size = 4 Bytes | Direct Mapping | 16 Lines</p>
+<p><strong>Memory Access Sequence:</strong> 0, 4, 0, 64, 4, 64</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Step</th>
+      <th>Address</th>
+      <th>Block No.</th>
+      <th>Line Index</th>
+      <th>Tag</th>
+      <th>Offset</th>
+      <th>Access Outcome</th>
+      <th>Action & State Change</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td><span class="miss">MISS</span></td>
+      <td>Compulsory cold miss. Line 0 initialized with Tag 0, Block 0.</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>4</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td><span class="miss">MISS</span></td>
+      <td>Compulsory cold miss. Line 1 initialized with Tag 0, Block 1.</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td><span class="hit">HIT</span></td>
+      <td>Valid bit=1 and Tag=0 matches. Data retrieved from Cache Line 0.</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>64</td>
+      <td>16</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td><span class="replace">MISS_REPLACE</span></td>
+      <td>Conflict miss. Line 0 held Tag 0. Evicted Block 0, inserted Block 16 (Tag 1).</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>4</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td><span class="hit">HIT</span></td>
+      <td>Valid bit=1 and Tag=0 matches in Line 1.</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>64</td>
+      <td>16</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td><span class="hit">HIT</span></td>
+      <td>Valid bit=1 and Tag=1 matches in Line 0.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Demonstration Statistics Summary</h3>
+<p>Total Memory Accesses: <strong>6</strong> | Cache Hits: <strong>3</strong> | Cache Misses: <strong>3</strong> | <strong>Hit Ratio: 50.00%</strong> | <strong>Miss Ratio: 50.00%</strong></p>
+
+<h2>4. Algorithmic Implementation</h2>
+<h3>4.1 C++17 Direct Mapping Logic</h3>
+<pre><code>SimEvent DirectMappedCache::access(uint32_t address) {
+    ++stats.total_accesses;
+    auto bd = breakdown_address(address, cfg);
+    SimEvent ev;
+    ev.address = address;
+    ev.block_number = bd.block_number;
+    ev.tag = bd.tag;
+    ev.index = bd.index;
+    ev.offset = bd.offset;
+
+    CacheLine& line = lines[bd.index];
+    if (line.valid && line.tag == bd.tag) {
+        ev.hit = true;
+        ev.event_type = "HIT";
+        ++stats.hits;
+    } else {
+        ev.hit = false;
+        ++stats.misses;
+        if (line.valid) {
+            ev.replacement = true;
+            ev.victim_line = bd.index;
+            ev.evicted_block = line.block;
+            ev.event_type = "MISS_REPLACE";
+        } else {
+            ev.event_type = "MISS";
+        }
+        line.valid = true;
+        line.tag = bd.tag;
+        line.block = bd.block_number;
+    }
+    return ev;
+}</code></pre>
+
+<div class="page-break"></div>
+
+<h2>5. Automated Test Suite Execution</h2>
+<p>The project includes 90 automated unit and integration tests across algorithmic correctness and REST API contracts:</p>
+<table>
+  <thead>
+    <tr>
+      <th>Test Suite</th>
+      <th>Components Tested</th>
+      <th>Tests</th>
+      <th>Result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Configuration Validation</td>
+      <td>Powers of 2, divisibility, associativity, range constraints</td>
+      <td>8</td>
+      <td><span class="hit">8 / 8 PASS</span></td>
+    </tr>
+    <tr>
+      <td>Direct Mapping (Demo 1)</td>
+      <td>Step-by-step tag, index, hits, and conflict miss replacement</td>
+      <td>15</td>
+      <td><span class="hit">15 / 15 PASS</span></td>
+    </tr>
+    <tr>
+      <td>Fully Associative FIFO</td>
+      <td>Queue ordering, cold misses, correct oldest eviction</td>
+      <td>4</td>
+      <td><span class="hit">4 / 4 PASS</span></td>
+    </tr>
+    <tr>
+      <td>Fully Associative LRU</td>
+      <td>Timestamp updates, hit recency protection, correct eviction</td>
+      <td>4</td>
+      <td><span class="hit">4 / 4 PASS</span></td>
+    </tr>
+    <tr>
+      <td>Set Associative LRU</td>
+      <td>2-way set indexing, multi-set partitioning, hits & misses</td>
+      <td>5</td>
+      <td><span class="hit">5 / 5 PASS</span></td>
+    </tr>
+    <tr>
+      <td>Statistical Invariants</td>
+      <td>Hit% + Miss% = 100%, zero-access div-by-zero protection</td>
+      <td>5</td>
+      <td><span class="hit">5 / 5 PASS</span></td>
+    </tr>
+    <tr>
+      <td>Address Decomposition</td>
+      <td>Bit-level tag, index, offset width calculations</td>
+      <td>5</td>
+      <td><span class="hit">5 / 5 PASS</span></td>
+    </tr>
+    <tr>
+      <td>Flask REST Endpoints</td>
+      <td>/api/health, /api/configure, /api/simulate, /api/sample, /api/reset</td>
+      <td>40</td>
+      <td><span class="hit">40 / 40 PASS</span></td>
+    </tr>
+    <tr>
+      <td><strong>Total Test Suite</strong></td>
+      <td><strong>End-to-End Core & API Coverage</strong></td>
+      <td><strong>90</strong></td>
+      <td><span class="hit"><strong>90 / 90 (100% PASS)</strong></span></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>6. Viva Voce Preparation Guide</h2>
+<div class="box">
+  <strong>Q1: Why must the block size and cache size be powers of two?</strong><br>
+  <strong>A:</strong> In binary byte-addressable architecture, powers of two allow address decomposition via direct bit-slicing (shifts and masks) rather than expensive hardware division circuits.
+</div>
+<div class="box">
+  <strong>Q2: Why doesn't a cache hit update the FIFO queue?</strong><br>
+  <strong>A:</strong> First-In First-Out (FIFO) replacement strictly tracks the order of arrival (insertion) into the cache, irrespective of how many times a block is referenced. Updating recency on hits is the defining characteristic of Least Recently Used (LRU).
+</div>
+<div class="box">
+  <strong>Q3: What are the three types of cache misses (the 3 Cs)?</strong><br>
+  <strong>A:</strong>
+  1. <em>Compulsory Misses (Cold):</em> First reference to a memory block.<br>
+  2. <em>Capacity Misses:</em> Cache cannot contain all blocks needed for program execution.<br>
+  3. <em>Conflict Misses (Collision):</em> Occurs in direct-mapped or set-associative caches when multiple blocks map to the same line/set despite empty slots elsewhere.
+</div>
+
+<br><hr>
+<p style="text-align:center; color:#64748b; font-size:10pt;">
+  Cache Memory Simulator &bull; Academic Project Report &bull; B.Tech Computer Science and Engineering
+</p>
+</body>
+</html>

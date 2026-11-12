@@ -1,0 +1,573 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [7 0 R 9 0 R 11 0 R 13 0 R 15 0 R 17 0 R 19 0 R 21 0 R] /Count 8 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier /Encoding /WinAnsiEncoding >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier-Bold /Encoding /WinAnsiEncoding >>
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Contents 8 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> >>
+endobj
+8 0 obj
+<< /Length 2784 >>
+stream
+2.50 w 0.15 0.35 0.70 RG 35.00 35.00 525.00 770.00 re S
+1.00 w 0.80 0.85 0.90 RG 40.00 40.00 515.00 760.00 re S
+BT 0.30 0.45 0.75 rg /F2 12 Tf 1 0 0 1 175.00 740.00 Tm (A B.TECH ACADEMIC PROJECT REPORT) Tj ET
+BT 0.20 0.20 0.20 rg /F2 11 Tf 1 0 0 1 130.00 722.00 Tm (DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING) Tj ET
+1.50 w 0.20 0.35 0.70 RG 150.00 712.00 m 445.00 712.00 l S
+0.95 0.97 1.00 rg 1.50 w 0.25 0.45 0.85 RG 55.00 540.00 485.00 140.00 re B
+BT 0.10 0.25 0.65 rg /F2 24 Tf 1 0 0 1 115.00 635.00 Tm (CACHE MEMORY SIMULATOR) Tj ET
+BT 0.25 0.35 0.50 rg /F2 13 Tf 1 0 0 1 145.00 605.00 Tm (COMPUTER ORGANIZATION & ARCHITECTURE) Tj ET
+BT 0.30 0.30 0.30 rg /F1 11 Tf 1 0 0 1 100.00 575.00 Tm (Interactive Simulation Engine & Visualizer for Cache Mapping Techniques) Tj ET
+BT 0.15 0.55 0.35 rg /F2 10.5 Tf 1 0 0 1 112.00 555.00 Tm (Direct, Fully Associative, Set Associative Mapping with FIFO and LRU) Tj ET
+0.98 0.98 0.99 rg 1.00 w 0.80 0.85 0.90 RG 65.00 300.00 465.00 205.00 re B
+BT 0.20 0.25 0.40 rg /F2 10 Tf 1 0 0 1 85.00 480.00 Tm (Course / Subject:) Tj ET
+BT 0.10 0.10 0.10 rg /F1 10 Tf 1 0 0 1 220.00 480.00 Tm (Computer Organization and Architecture \(COA\)) Tj ET
+BT 0.20 0.25 0.40 rg /F2 10 Tf 1 0 0 1 85.00 457.00 Tm (Degree / Program:) Tj ET
+BT 0.10 0.10 0.10 rg /F1 10 Tf 1 0 0 1 220.00 457.00 Tm (Bachelor of Technology \(B.Tech\) - Computer Science & Engineering) Tj ET
+BT 0.20 0.25 0.40 rg /F2 10 Tf 1 0 0 1 85.00 434.00 Tm (Student Name:) Tj ET
+BT 0.10 0.10 0.10 rg /F1 10 Tf 1 0 0 1 220.00 434.00 Tm ([Your Name Here]) Tj ET
+BT 0.20 0.25 0.40 rg /F2 10 Tf 1 0 0 1 85.00 411.00 Tm (Roll / Reg. Number:) Tj ET
+BT 0.10 0.10 0.10 rg /F1 10 Tf 1 0 0 1 220.00 411.00 Tm ([Your Roll Number]) Tj ET
+BT 0.20 0.25 0.40 rg /F2 10 Tf 1 0 0 1 85.00 388.00 Tm (Faculty Guide:) Tj ET
+BT 0.10 0.10 0.10 rg /F1 10 Tf 1 0 0 1 220.00 388.00 Tm ([Faculty Guide Name]) Tj ET
+BT 0.20 0.25 0.40 rg /F2 10 Tf 1 0 0 1 85.00 365.00 Tm (Institution Name:) Tj ET
+BT 0.10 0.10 0.10 rg /F1 10 Tf 1 0 0 1 220.00 365.00 Tm ([Your College / University Name]) Tj ET
+BT 0.20 0.25 0.40 rg /F2 10 Tf 1 0 0 1 85.00 342.00 Tm (Technologies Used:) Tj ET
+BT 0.10 0.10 0.10 rg /F1 10 Tf 1 0 0 1 220.00 342.00 Tm (C++17, G++, Python 3, Flask, HTML5, CSS3, JavaScript) Tj ET
+BT 0.20 0.25 0.40 rg /F2 10 Tf 1 0 0 1 85.00 319.00 Tm (Academic Year:) Tj ET
+BT 0.10 0.10 0.10 rg /F1 10 Tf 1 0 0 1 220.00 319.00 Tm (2024 - 2025) Tj ET
+BT 0.40 0.40 0.40 rg /F1 10 Tf 1 0 0 1 140.00 240.00 Tm (Submitted in partial fulfillment of the academic requirements) Tj ET
+BT 0.20 0.20 0.20 rg /F2 10.5 Tf 1 0 0 1 115.00 225.00 Tm (for the award of Bachelor of Technology in Computer Science & Engineering) Tj ET
+BT 0.50 0.50 0.50 rg /F1 10 Tf 1 0 0 1 175.00 120.00 Tm ([City, State, India] ? Academic Year 2024-2025) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Contents 10 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> >>
+endobj
+10 0 obj
+<< /Length 3798 >>
+stream
+0.80 w 0.70 0.70 0.80 RG 50.00 800.00 m 545.00 800.00 l S
+BT 0.40 0.40 0.50 rg /F1 8.5 Tf 1 0 0 1 50.00 806.00 Tm (Cache Memory Simulator ? COA B.Tech Academic Project) Tj ET
+BT 0.20 0.35 0.70 rg /F2 8.5 Tf 1 0 0 1 420.00 806.00 Tm (Certificate & Declaration) Tj ET
+0.80 w 0.80 0.80 0.80 RG 50.00 45.00 m 545.00 45.00 l S
+BT 0.50 0.50 0.50 rg /F1 8 Tf 1 0 0 1 50.00 32.00 Tm (Department of Computer Science & Engineering) Tj ET
+BT 0.50 0.50 0.50 rg /F1 8 Tf 1 0 0 1 500.00 32.00 Tm (Page 2 of 8) Tj ET
+BT 0.10 0.25 0.60 rg /F2 16 Tf 1 0 0 1 240.00 755.00 Tm (CERTIFICATE) Tj ET
+1.20 w 0.10 0.25 0.60 RG 230.00 747.00 m 365.00 747.00 l S
+BT 0.10 0.10 0.10 rg /F1 10.5 Tf 1 0 0 1 50.00 710.00 Tm (This is to certify that the project entitled "CACHE MEMORY SIMULATOR" is a bonafide) Tj ET
+BT 0.10 0.10 0.10 rg /F1 10.5 Tf 1 0 0 1 50.00 692.00 Tm (work carried out by [Student Name] \(Roll No: [Your Roll Number]\) in partial fulfillment) Tj ET
+BT 0.10 0.10 0.10 rg /F1 10.5 Tf 1 0 0 1 50.00 674.00 Tm (of the requirements for the degree of Bachelor of Technology in Computer Science and) Tj ET
+BT 0.10 0.10 0.10 rg /F1 10.5 Tf 1 0 0 1 50.00 656.00 Tm (Engineering during the academic year 2024 - 2025.) Tj ET
+1.00 w 0.40 0.40 0.40 RG 50.00 560.00 m 200.00 560.00 l S
+BT 0.10 0.10 0.10 rg /F2 10 Tf 1 0 0 1 50.00 545.00 Tm (Faculty Guide Signature) Tj ET
+BT 0.10 0.10 0.10 rg /F1 9.5 Tf 1 0 0 1 50.00 532.00 Tm ([Faculty Guide Name]) Tj ET
+BT 0.10 0.10 0.10 rg /F1 9.5 Tf 1 0 0 1 50.00 520.00 Tm (Department of CSE) Tj ET
+1.00 w 0.40 0.40 0.40 RG 395.00 560.00 m 545.00 560.00 l S
+BT 0.10 0.10 0.10 rg /F2 10 Tf 1 0 0 1 395.00 545.00 Tm (Head of Department \(CSE\)) Tj ET
+BT 0.10 0.10 0.10 rg /F1 9.5 Tf 1 0 0 1 395.00 532.00 Tm (Department of CSE) Tj ET
+BT 0.10 0.10 0.10 rg /F1 9.5 Tf 1 0 0 1 395.00 520.00 Tm ([College Name]) Tj ET
+BT 0.10 0.25 0.60 rg /F2 16 Tf 1 0 0 1 245.00 450.00 Tm (DECLARATION) Tj ET
+1.20 w 0.10 0.25 0.60 RG 235.00 442.00 m 360.00 442.00 l S
+BT 0.10 0.10 0.10 rg /F1 10.5 Tf 1 0 0 1 50.00 405.00 Tm (I hereby declare that this project titled "CACHE MEMORY SIMULATOR" submitted) Tj ET
+BT 0.10 0.10 0.10 rg /F1 10.5 Tf 1 0 0 1 50.00 387.00 Tm (for the award of Bachelor of Technology in Computer Science & Engineering represents my) Tj ET
+BT 0.10 0.10 0.10 rg /F1 10.5 Tf 1 0 0 1 50.00 369.00 Tm (original work. All algorithms, source code, tests, and documentation have been prepared) Tj ET
+BT 0.10 0.10 0.10 rg /F1 10.5 Tf 1 0 0 1 50.00 351.00 Tm (independently. All external literature and concepts have been duly referenced.) Tj ET
+1.00 w 0.40 0.40 0.40 RG 395.00 270.00 m 545.00 270.00 l S
+BT 0.10 0.10 0.10 rg /F2 10 Tf 1 0 0 1 395.00 255.00 Tm (Candidate Signature) Tj ET
+BT 0.10 0.10 0.10 rg /F1 9.5 Tf 1 0 0 1 395.00 242.00 Tm ([Student Name]) Tj ET
+BT 0.10 0.10 0.10 rg /F1 9.5 Tf 1 0 0 1 395.00 230.00 Tm (Roll No: [Roll Number]) Tj ET
+0.96 0.98 1.00 rg 1.00 w 0.30 0.50 0.80 RG 50.00 80.00 495.00 120.00 re B
+BT 0.10 0.25 0.60 rg /F2 11 Tf 1 0 0 1 60.00 180.00 Tm (ABSTRACT) Tj ET
+BT 0.10 0.10 0.10 rg /F1 9.5 Tf 1 0 0 1 60.00 162.00 Tm (This project delivers an interactive educational Cache Memory Simulator for Computer) Tj ET
+BT 0.10 0.10 0.10 rg /F1 9.5 Tf 1 0 0 1 60.00 148.00 Tm (Organization & Architecture \(COA\). Built upon a C++17 algorithmic engine and a Python Flask) Tj ET
+BT 0.10 0.10 0.10 rg /F1 9.5 Tf 1 0 0 1 60.00 134.00 Tm (REST API, it simulates Direct, Fully Associative, and Set Associative Mapping with FIFO/LRU) Tj ET
+BT 0.10 0.10 0.10 rg /F1 9.5 Tf 1 0 0 1 60.00 120.00 Tm (replacement policies. Includes complete 32-bit address decomposition, dynamic metrics, and 90 tests.) Tj ET
+BT 0.15 0.55 0.35 rg /F2 9.5 Tf 1 0 0 1 60.00 102.00 Tm (Demo 1 \(Addresses 0, 4, 0, 64, 4, 64\) produces exactly 3 hits, 3 misses \(50% hit rate\).) Tj ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Contents 12 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> >>
+endobj
+12 0 obj
+<< /Length 7272 >>
+stream
+0.80 w 0.70 0.70 0.80 RG 50.00 800.00 m 545.00 800.00 l S
+BT 0.40 0.40 0.50 rg /F1 8.5 Tf 1 0 0 1 50.00 806.00 Tm (Cache Memory Simulator ? COA B.Tech Academic Project) Tj ET
+BT 0.20 0.35 0.70 rg /F2 8.5 Tf 1 0 0 1 430.00 806.00 Tm (Contents & Introduction) Tj ET
+0.80 w 0.80 0.80 0.80 RG 50.00 45.00 m 545.00 45.00 l S
+BT 0.50 0.50 0.50 rg /F1 8 Tf 1 0 0 1 50.00 32.00 Tm (Department of Computer Science & Engineering) Tj ET
+BT 0.50 0.50 0.50 rg /F1 8 Tf 1 0 0 1 500.00 32.00 Tm (Page 3 of 8) Tj ET
+BT 0.10 0.25 0.60 rg /F2 14 Tf 1 0 0 1 50.00 755.00 Tm (TABLE OF CONTENTS) Tj ET
+BT 0.10 0.10 0.10 rg /F1 10 Tf 1 0 0 1 60.00 730.00 Tm (1. Introduction & Computer Memory Hierarchy) Tj ET
+0.50 w 0.80 0.80 0.80 RG 350.00 732.00 m 490.00 732.00 l S
+BT 0.20 0.40 0.70 rg /F2 10 Tf 1 0 0 1 500.00 730.00 Tm (Page 3) Tj ET
+BT 0.10 0.10 0.10 rg /F1 10 Tf 1 0 0 1 60.00 710.00 Tm (2. Cache Architecture Fundamentals & Terminology) Tj ET
+0.50 w 0.80 0.80 0.80 RG 350.00 712.00 m 490.00 712.00 l S
+BT 0.20 0.40 0.70 rg /F2 10 Tf 1 0 0 1 500.00 710.00 Tm (Page 4) Tj ET
+BT 0.10 0.10 0.10 rg /F1 10 Tf 1 0 0 1 60.00 690.00 Tm (3. Mapping Techniques \(Direct, Fully Associative, Set Associative\)) Tj ET
+0.50 w 0.80 0.80 0.80 RG 350.00 692.00 m 490.00 692.00 l S
+BT 0.20 0.40 0.70 rg /F2 10 Tf 1 0 0 1 500.00 690.00 Tm (Page 5) Tj ET
+BT 0.10 0.10 0.10 rg /F1 10 Tf 1 0 0 1 60.00 670.00 Tm (4. Replacement Policies: FIFO vs LRU) Tj ET
+0.50 w 0.80 0.80 0.80 RG 350.00 672.00 m 490.00 672.00 l S
+BT 0.20 0.40 0.70 rg /F2 10 Tf 1 0 0 1 500.00 670.00 Tm (Page 6) Tj ET
+BT 0.10 0.10 0.10 rg /F1 10 Tf 1 0 0 1 60.00 650.00 Tm (5. Verification: Sample Demonstration 1 \(Step-by-Step\)) Tj ET
+0.50 w 0.80 0.80 0.80 RG 350.00 652.00 m 490.00 652.00 l S
+BT 0.20 0.40 0.70 rg /F2 10 Tf 1 0 0 1 500.00 650.00 Tm (Page 7) Tj ET
+BT 0.10 0.10 0.10 rg /F1 10 Tf 1 0 0 1 60.00 630.00 Tm (6. System Architecture, Testing Suite \(90/90 Pass\) & Viva Voce Guide) Tj ET
+0.50 w 0.80 0.80 0.80 RG 350.00 632.00 m 490.00 632.00 l S
+BT 0.20 0.40 0.70 rg /F2 10 Tf 1 0 0 1 500.00 630.00 Tm (Page 8) Tj ET
+1.00 w 0.85 0.85 0.85 RG 50.00 595.00 m 545.00 595.00 l S
+BT 0.10 0.25 0.60 rg /F2 12 Tf 1 0 0 1 50.00 570.00 Tm (1. INTRODUCTION & COMPUTER MEMORY HIERARCHY) Tj ET
+BT 0.10 0.10 0.10 rg /F1 10 Tf 1 0 0 1 50.00 545.00 Tm (In modern microprocessor systems, the processor clock frequency operates in the gigahertz) Tj ET
+BT 0.10 0.10 0.10 rg /F1 10 Tf 1 0 0 1 50.00 530.00 Tm (regime \(sub-nanosecond cycles\), while off-chip DRAM latency typically requires 50 to 100 ns.) Tj ET
+BT 0.10 0.10 0.10 rg /F1 10 Tf 1 0 0 1 50.00 515.00 Tm (This severe performance disparity is known as the 'Memory Wall'.) Tj ET
+0.98 0.99 1.00 rg 1.00 w 0.80 0.85 0.90 RG 50.00 310.00 495.00 185.00 re B
+BT 0.15 0.30 0.60 rg /F2 10 Tf 1 0 0 1 140.00 475.00 Tm (Memory Hierarchy Levels in Modern Computing Systems) Tj ET
+BT 0.30 0.30 0.40 rg /F2 8.5 Tf 1 0 0 1 60.00 450.00 Tm (Hierarchy Level) Tj ET
+BT 0.30 0.30 0.40 rg /F2 8.5 Tf 1 0 0 1 200.00 450.00 Tm (Capacity) Tj ET
+BT 0.30 0.30 0.40 rg /F2 8.5 Tf 1 0 0 1 280.00 450.00 Tm (Latency) Tj ET
+BT 0.30 0.30 0.40 rg /F2 8.5 Tf 1 0 0 1 350.00 450.00 Tm (Technology) Tj ET
+BT 0.30 0.30 0.40 rg /F2 8.5 Tf 1 0 0 1 480.00 450.00 Tm (Cost/Bit) Tj ET
+0.80 w 0.70 0.70 0.80 RG 55.00 446.00 m 540.00 446.00 l S
+BT 0.10 0.10 0.10 rg /F1 8.5 Tf 1 0 0 1 60.00 432.00 Tm (Level 0: CPU Registers) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8.5 Tf 1 0 0 1 200.00 432.00 Tm (< 1 KB) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8.5 Tf 1 0 0 1 280.00 432.00 Tm (< 0.5 ns) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8.5 Tf 1 0 0 1 350.00 432.00 Tm (Flip-flops inside core) Tj ET
+BT 0.15 0.55 0.30 rg /F2 8.5 Tf 1 0 0 1 480.00 432.00 Tm ($$$$$) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8.5 Tf 1 0 0 1 60.00 415.00 Tm (Level 1: L1 Cache) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8.5 Tf 1 0 0 1 200.00 415.00 Tm (32 - 64 KB) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8.5 Tf 1 0 0 1 280.00 415.00 Tm (~ 1.0 ns) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8.5 Tf 1 0 0 1 350.00 415.00 Tm (On-chip SRAM \(split I/D\)) Tj ET
+BT 0.15 0.55 0.30 rg /F2 8.5 Tf 1 0 0 1 480.00 415.00 Tm ($$$$) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8.5 Tf 1 0 0 1 60.00 398.00 Tm (Level 2: L2 Cache) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8.5 Tf 1 0 0 1 200.00 398.00 Tm (256 KB - 4 MB) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8.5 Tf 1 0 0 1 280.00 398.00 Tm (~ 4 - 10 ns) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8.5 Tf 1 0 0 1 350.00 398.00 Tm (Dedicated SRAM per core) Tj ET
+BT 0.15 0.55 0.30 rg /F2 8.5 Tf 1 0 0 1 480.00 398.00 Tm ($$$) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8.5 Tf 1 0 0 1 60.00 381.00 Tm (Level 3: L3 Cache) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8.5 Tf 1 0 0 1 200.00 381.00 Tm (8 - 64 MB) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8.5 Tf 1 0 0 1 280.00 381.00 Tm (~ 20 - 40 ns) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8.5 Tf 1 0 0 1 350.00 381.00 Tm (Shared multi-core SRAM) Tj ET
+BT 0.15 0.55 0.30 rg /F2 8.5 Tf 1 0 0 1 480.00 381.00 Tm ($$) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8.5 Tf 1 0 0 1 60.00 364.00 Tm (Level 4: Main Memory) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8.5 Tf 1 0 0 1 200.00 364.00 Tm (8 - 128 GB) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8.5 Tf 1 0 0 1 280.00 364.00 Tm (~ 60 - 100 ns) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8.5 Tf 1 0 0 1 350.00 364.00 Tm (Synchronous DRAM \(DIMMs\)) Tj ET
+BT 0.15 0.55 0.30 rg /F2 8.5 Tf 1 0 0 1 480.00 364.00 Tm ($) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8.5 Tf 1 0 0 1 60.00 347.00 Tm (Level 5: Secondary Storage) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8.5 Tf 1 0 0 1 200.00 347.00 Tm (1 - 8 TB) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8.5 Tf 1 0 0 1 280.00 347.00 Tm (10 us - 10 ms) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8.5 Tf 1 0 0 1 350.00 347.00 Tm (NVMe SSD / Hard Disk) Tj ET
+BT 0.15 0.55 0.30 rg /F2 8.5 Tf 1 0 0 1 480.00 347.00 Tm (Lowest) Tj ET
+BT 0.10 0.10 0.10 rg /F2 10 Tf 1 0 0 1 50.00 275.00 Tm (The Locality Principle: Caching succeeds because programs display two distinct properties:) Tj ET
+BT 0.10 0.10 0.10 rg /F1 9.5 Tf 1 0 0 1 65.00 255.00 Tm (1. Temporal Locality: Memory locations accessed recently are likely to be accessed again soon.) Tj ET
+BT 0.10 0.10 0.10 rg /F1 9.5 Tf 1 0 0 1 65.00 238.00 Tm (2. Spatial Locality: Memory locations near recently accessed addresses are likely to be accessed soon.) Tj ET
+0.95 0.98 0.95 rg 1.00 w 0.30 0.70 0.40 RG 50.00 90.00 495.00 125.00 re B
+BT 0.10 0.40 0.20 rg /F2 10.5 Tf 1 0 0 1 65.00 195.00 Tm (Key Project Objectives Accomplished:) Tj ET
+BT 0.10 0.10 0.10 rg /F1 9 Tf 1 0 0 1 75.00 178.00 Tm (? Complete C++17 algorithmic engine with Direct, Fully Associative, and Set Associative Mapping.) Tj ET
+BT 0.10 0.10 0.10 rg /F1 9 Tf 1 0 0 1 75.00 163.00 Tm (? Correct implementation of FIFO \(queue-based\) and LRU \(timestamp-based\) replacement policies.) Tj ET
+BT 0.10 0.10 0.10 rg /F1 9 Tf 1 0 0 1 75.00 148.00 Tm (? Real-time 32-bit address field decomposition: Tag, Index, and Block Offset visualization.) Tj ET
+BT 0.10 0.10 0.10 rg /F1 9 Tf 1 0 0 1 75.00 133.00 Tm (? Interactive step-by-step navigation with forward/backward time-travel state reconstruction.) Tj ET
+BT 0.10 0.10 0.10 rg /F1 9 Tf 1 0 0 1 75.00 118.00 Tm (? Automated test suite with 90 tests achieving 100% pass rate across engine and Flask REST API.) Tj ET
+BT 0.10 0.35 0.65 rg /F2 9 Tf 1 0 0 1 75.00 103.00 Tm (? Zero frontend result fabrication: 100% of displayed states originate from the verified engine.) Tj ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Contents 14 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> >>
+endobj
+14 0 obj
+<< /Length 6105 >>
+stream
+0.80 w 0.70 0.70 0.80 RG 50.00 800.00 m 545.00 800.00 l S
+BT 0.40 0.40 0.50 rg /F1 8.5 Tf 1 0 0 1 50.00 806.00 Tm (Cache Memory Simulator ? COA B.Tech Academic Project) Tj ET
+BT 0.20 0.35 0.70 rg /F2 8.5 Tf 1 0 0 1 385.00 806.00 Tm (Cache Fundamentals & Terminology) Tj ET
+0.80 w 0.80 0.80 0.80 RG 50.00 45.00 m 545.00 45.00 l S
+BT 0.50 0.50 0.50 rg /F1 8 Tf 1 0 0 1 50.00 32.00 Tm (Department of Computer Science & Engineering) Tj ET
+BT 0.50 0.50 0.50 rg /F1 8 Tf 1 0 0 1 500.00 32.00 Tm (Page 4 of 8) Tj ET
+BT 0.10 0.25 0.60 rg /F2 12 Tf 1 0 0 1 50.00 755.00 Tm (2. CACHE ARCHITECTURE FUNDAMENTALS & TERMINOLOGY) Tj ET
+BT 0.15 0.30 0.60 rg /F2 9.5 Tf 1 0 0 1 50.00 730.00 Tm (Cache Line \(Block\):) Tj ET
+BT 0.10 0.10 0.10 rg /F1 9 Tf 1 0 0 1 190.00 730.00 Tm (The atomic block of data transferred between main memory and cache. Sizes are always powers of two \(e.g., 4B, 8B, 16B, 64B\).) Tj ET
+BT 0.15 0.30 0.60 rg /F2 9.5 Tf 1 0 0 1 50.00 705.00 Tm (Tag Field:) Tj ET
+BT 0.10 0.10 0.10 rg /F1 9 Tf 1 0 0 1 190.00 705.00 Tm (Upper address bits stored alongside cached data to uniquely identify which memory block is currently occupying the line.) Tj ET
+BT 0.15 0.30 0.60 rg /F2 9.5 Tf 1 0 0 1 50.00 680.00 Tm (Valid Bit \(V\):) Tj ET
+BT 0.10 0.10 0.10 rg /F1 9 Tf 1 0 0 1 190.00 680.00 Tm (A 1-bit hardware flag. V=1 indicates the line contains valid initialized memory data; V=0 indicates unallocated / dirty state.) Tj ET
+BT 0.15 0.30 0.60 rg /F2 9.5 Tf 1 0 0 1 50.00 655.00 Tm (Index / Set Index:) Tj ET
+BT 0.10 0.10 0.10 rg /F1 9 Tf 1 0 0 1 190.00 655.00 Tm (Middle address bits that select which specific cache line \(direct mapping\) or set \(set associative mapping\) the block maps to.) Tj ET
+BT 0.15 0.30 0.60 rg /F2 9.5 Tf 1 0 0 1 50.00 630.00 Tm (Block Offset:) Tj ET
+BT 0.10 0.10 0.10 rg /F1 9 Tf 1 0 0 1 190.00 630.00 Tm (Lower address bits that select the exact byte within the multi-byte cache block.) Tj ET
+BT 0.15 0.30 0.60 rg /F2 9.5 Tf 1 0 0 1 50.00 605.00 Tm (Cache Hit:) Tj ET
+BT 0.10 0.10 0.10 rg /F1 9 Tf 1 0 0 1 190.00 605.00 Tm (Condition where the requested memory address tag matches a valid tag in the addressed cache set. Low latency retrieval.) Tj ET
+BT 0.15 0.30 0.60 rg /F2 9.5 Tf 1 0 0 1 50.00 580.00 Tm (Cache Miss:) Tj ET
+BT 0.10 0.10 0.10 rg /F1 9 Tf 1 0 0 1 190.00 580.00 Tm (Condition where the requested memory block is not found in cache. Data must be fetched from higher-latency DRAM.) Tj ET
+BT 0.15 0.30 0.60 rg /F2 9.5 Tf 1 0 0 1 50.00 555.00 Tm (Compulsory \(Cold\) Miss:) Tj ET
+BT 0.10 0.10 0.10 rg /F1 9 Tf 1 0 0 1 190.00 555.00 Tm (First-ever access to a block; it has never been loaded into the cache before.) Tj ET
+BT 0.15 0.30 0.60 rg /F2 9.5 Tf 1 0 0 1 50.00 530.00 Tm (Conflict \(Collision\) Miss:) Tj ET
+BT 0.10 0.10 0.10 rg /F1 9 Tf 1 0 0 1 190.00 530.00 Tm (Multiple blocks map to the same set/line, forcing premature eviction despite available capacity elsewhere.) Tj ET
+BT 0.15 0.30 0.60 rg /F2 9.5 Tf 1 0 0 1 50.00 505.00 Tm (Capacity Miss:) Tj ET
+BT 0.10 0.10 0.10 rg /F1 9 Tf 1 0 0 1 190.00 505.00 Tm (Cache is physically too small to retain all working-set blocks needed by the active program.) Tj ET
+1.00 w 0.85 0.85 0.85 RG 50.00 470.00 m 545.00 470.00 l S
+BT 0.10 0.25 0.60 rg /F2 11 Tf 1 0 0 1 50.00 445.00 Tm (32-Bit Memory Address Decomposition \(Byte-Addressable Architecture\)) Tj ET
+0.95 0.96 0.98 rg 1.00 w 0.30 0.40 0.60 RG 50.00 360.00 495.00 65.00 re B
+0.88 0.85 0.98 rg 1.00 w 0.40 0.20 0.70 RG 55.00 380.00 260.00 35.00 re B
+BT 0.30 0.10 0.60 rg /F2 10 Tf 1 0 0 1 150.00 393.00 Tm (TAG FIELD) Tj ET
+BT 0.40 0.20 0.70 rg /F1 8 Tf 1 0 0 1 130.00 370.00 Tm (Width = 32 - i - o bits) Tj ET
+0.85 0.92 1.00 rg 1.00 w 0.15 0.45 0.80 RG 315.00 380.00 130.00 35.00 re B
+BT 0.10 0.30 0.70 rg /F2 10 Tf 1 0 0 1 345.00 393.00 Tm (INDEX FIELD) Tj ET
+BT 0.10 0.30 0.70 rg /F1 8 Tf 1 0 0 1 350.00 370.00 Tm (Width = i bits) Tj ET
+0.85 0.98 0.92 rg 1.00 w 0.10 0.60 0.40 RG 445.00 380.00 95.00 35.00 re B
+BT 0.05 0.45 0.25 rg /F2 10 Tf 1 0 0 1 470.00 393.00 Tm (OFFSET) Tj ET
+BT 0.05 0.45 0.25 rg /F1 8 Tf 1 0 0 1 465.00 370.00 Tm (Width = o bits) Tj ET
+BT 0.10 0.10 0.10 rg /F2 10 Tf 1 0 0 1 50.00 335.00 Tm (Mathematical Derivations for Bit Widths:) Tj ET
+BT 0.10 0.10 0.10 rg /F3 9.5 Tf 1 0 0 1 65.00 318.00 Tm (? Offset Bits: o = log2\(Block Size in Bytes\)) Tj ET
+BT 0.10 0.10 0.10 rg /F3 9.5 Tf 1 0 0 1 65.00 302.00 Tm (? Number of Sets: S = Cache Size / \(Block Size * Associativity\)) Tj ET
+BT 0.10 0.10 0.10 rg /F3 9.5 Tf 1 0 0 1 65.00 286.00 Tm (? Index Bits: i = log2\(S\)  [Note: i = 0 for Fully Associative where S = 1]) Tj ET
+BT 0.10 0.10 0.10 rg /F3 9.5 Tf 1 0 0 1 65.00 270.00 Tm (? Tag Bits: t = 32 - i - o) Tj ET
+0.99 0.99 0.99 rg 1.00 w 0.80 0.85 0.90 RG 50.00 80.00 495.00 175.00 re B
+BT 0.20 0.35 0.70 rg /F2 10 Tf 1 0 0 1 65.00 235.00 Tm (Concrete Numerical Example \(Demo 1 Configuration\):) Tj ET
+BT 0.10 0.10 0.10 rg /F1 9 Tf 1 0 0 1 65.00 218.00 Tm (Configuration: Main Memory = 256 B \(8-bit address space\), Cache = 64 B, Block = 4 B, Direct Mapping) Tj ET
+BT 0.10 0.10 0.10 rg /F3 9 Tf 1 0 0 1 75.00 202.00 Tm (? Total Cache Lines = 64 / 4 = 16 lines) Tj ET
+BT 0.10 0.10 0.10 rg /F3 9 Tf 1 0 0 1 75.00 187.00 Tm (? Block Offset Bits = log2\(4\) = 2 bits \(bits 0..1\)) Tj ET
+BT 0.10 0.10 0.10 rg /F3 9 Tf 1 0 0 1 75.00 172.00 Tm (? Line Index Bits  = log2\(16\) = 4 bits \(bits 2..5\)) Tj ET
+BT 0.10 0.10 0.10 rg /F3 9 Tf 1 0 0 1 75.00 157.00 Tm (? Tag Bits \(32-bit architecture\) = 32 - 4 - 2 = 26 bits \(bits 6..31\)) Tj ET
+BT 0.10 0.10 0.10 rg /F2 9 Tf 1 0 0 1 65.00 138.00 Tm (Address 68 Decomposition \(Decimal 68 = 0x00000044 = Binary 0000...0000 0100 0100\):) Tj ET
+BT 0.10 0.10 0.10 rg /F3 9 Tf 1 0 0 1 75.00 122.00 Tm (  Block Number = 68 / 4 = 17) Tj ET
+BT 0.10 0.10 0.10 rg /F3 9 Tf 1 0 0 1 75.00 108.00 Tm (  Block Offset = 68 % 4 = 0 \(byte 0 of block\)) Tj ET
+BT 0.10 0.10 0.10 rg /F3 9 Tf 1 0 0 1 75.00 94.00 Tm (  Line Index   = 17 % 16 = 1 \(maps to Cache Line 1\)) Tj ET
+BT 0.10 0.10 0.10 rg /F3 9 Tf 1 0 0 1 75.00 80.00 Tm (  Tag          = 17 / 16 = 1 \(stored in Line 1 tag register\)) Tj ET
+endstream
+endobj
+15 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Contents 16 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> >>
+endobj
+16 0 obj
+<< /Length 6812 >>
+stream
+0.80 w 0.70 0.70 0.80 RG 50.00 800.00 m 545.00 800.00 l S
+BT 0.40 0.40 0.50 rg /F1 8.5 Tf 1 0 0 1 50.00 806.00 Tm (Cache Memory Simulator ? COA B.Tech Academic Project) Tj ET
+BT 0.20 0.35 0.70 rg /F2 8.5 Tf 1 0 0 1 440.00 806.00 Tm (Cache Mapping Schemes) Tj ET
+0.80 w 0.80 0.80 0.80 RG 50.00 45.00 m 545.00 45.00 l S
+BT 0.50 0.50 0.50 rg /F1 8 Tf 1 0 0 1 50.00 32.00 Tm (Department of Computer Science & Engineering) Tj ET
+BT 0.50 0.50 0.50 rg /F1 8 Tf 1 0 0 1 500.00 32.00 Tm (Page 5 of 8) Tj ET
+BT 0.10 0.25 0.60 rg /F2 12 Tf 1 0 0 1 50.00 755.00 Tm (3. CACHE MAPPING TECHNIQUES COMPARISON) Tj ET
+0.98 0.99 1.00 rg 1.00 w 0.25 0.45 0.80 RG 50.00 615.00 495.00 125.00 re B
+BT 0.15 0.30 0.60 rg /F2 10.5 Tf 1 0 0 1 60.00 722.00 Tm (Direct Mapping \(N = 1, S = Cache Lines\)) Tj ET
+BT 0.10 0.10 0.10 rg /F1 9 Tf 1 0 0 1 60.00 706.00 Tm (? Principle: Each memory block maps to exactly one predetermined line: Line = Block_Num % Num_Lines) Tj ET
+BT 0.10 0.10 0.10 rg /F1 9 Tf 1 0 0 1 60.00 691.00 Tm (? Hardware: Requires only 1 tag comparator and simple multiplexers. Fastest lookup delay.) Tj ET
+BT 0.10 0.10 0.10 rg /F1 9 Tf 1 0 0 1 60.00 676.00 Tm (? Eviction: Natural line overwriting. If the line is already valid with another tag, it is evicted immediately.) Tj ET
+BT 0.10 0.10 0.10 rg /F1 9 Tf 1 0 0 1 60.00 661.00 Tm (? Limitation: Severe conflict misses \(thrashing\) when concurrently accessing blocks sharing line index.) Tj ET
+BT 0.70 0.20 0.20 rg /F2 8.5 Tf 1 0 0 1 60.00 646.00 Tm (  Example: Address 0 \(Block 0\) and Address 64 \(Block 16\) both map to Line 0. Alternating access = 0% hits.) Tj ET
+0.98 1.00 0.98 rg 1.00 w 0.25 0.70 0.40 RG 50.00 475.00 495.00 125.00 re B
+BT 0.10 0.45 0.25 rg /F2 10.5 Tf 1 0 0 1 60.00 582.00 Tm (Fully Associative Mapping \(S = 1, N = Cache Lines\)) Tj ET
+BT 0.10 0.10 0.10 rg /F1 9 Tf 1 0 0 1 60.00 566.00 Tm (? Principle: A memory block can reside in ANY cache line. No index bits exist; Tag = Block Number.) Tj ET
+BT 0.10 0.10 0.10 rg /F1 9 Tf 1 0 0 1 60.00 551.00 Tm (? Hardware: Requires N parallel tag comparators. Search operates associatively across all lines.) Tj ET
+BT 0.10 0.10 0.10 rg /F1 9 Tf 1 0 0 1 60.00 536.00 Tm (? Eviction: When cache is full, victim selection is governed by replacement policy \(FIFO or LRU\).) Tj ET
+BT 0.10 0.10 0.10 rg /F1 9 Tf 1 0 0 1 60.00 521.00 Tm (? Advantages: Zero conflict misses; optimal capacity utilization.) Tj ET
+BT 0.10 0.10 0.10 rg /F1 9 Tf 1 0 0 1 60.00 506.00 Tm (? Limitation: Impractical for large caches due to silicon area, cost, and power. Used in small TLBs.) Tj ET
+0.99 0.98 1.00 rg 1.00 w 0.50 0.30 0.80 RG 50.00 335.00 495.00 125.00 re B
+BT 0.30 0.15 0.60 rg /F2 10.5 Tf 1 0 0 1 60.00 442.00 Tm (Set Associative Mapping \(N-Way, S = Cache Lines / N\)) Tj ET
+BT 0.10 0.10 0.10 rg /F1 9 Tf 1 0 0 1 60.00 426.00 Tm (? Principle: Cache is partitioned into S sets, each containing N lines. Block maps to one set: Set = Block % S.) Tj ET
+BT 0.10 0.10 0.10 rg /F1 9 Tf 1 0 0 1 60.00 411.00 Tm (? Hardware: Requires N parallel tag comparators \(e.g. 2, 4, 8, 16 comparators\).) Tj ET
+BT 0.10 0.10 0.10 rg /F1 9 Tf 1 0 0 1 60.00 396.00 Tm (? Eviction: When all N lines in the target set are full, the set's replacement policy chooses the victim.) Tj ET
+BT 0.10 0.10 0.10 rg /F1 9 Tf 1 0 0 1 60.00 381.00 Tm (? Engineering Sweet Spot: 4-way and 8-way set associative caches provide ~95% of fully associative) Tj ET
+BT 0.20 0.40 0.70 rg /F2 8.5 Tf 1 0 0 1 60.00 366.00 Tm (  miss-reduction benefits while keeping hardware overhead and clock latency low. Standard in L1/L2/L3.) Tj ET
+BT 0.10 0.10 0.10 rg /F2 10 Tf 1 0 0 1 50.00 315.00 Tm (Side-by-Side Scheme Comparison Matrix:) Tj ET
+BT 0.30 0.30 0.40 rg /F2 8 Tf 1 0 0 1 55.00 295.00 Tm (Mapping Type) Tj ET
+BT 0.30 0.30 0.40 rg /F2 8 Tf 1 0 0 1 155.00 295.00 Tm (Ways \(N\)) Tj ET
+BT 0.30 0.30 0.40 rg /F2 8 Tf 1 0 0 1 210.00 295.00 Tm (Num Sets \(S\)) Tj ET
+BT 0.30 0.30 0.40 rg /F2 8 Tf 1 0 0 1 280.00 295.00 Tm (Conflict Misses) Tj ET
+BT 0.30 0.30 0.40 rg /F2 8 Tf 1 0 0 1 365.00 295.00 Tm (Comparators) Tj ET
+BT 0.30 0.30 0.40 rg /F2 8 Tf 1 0 0 1 440.00 295.00 Tm (Replacement) Tj ET
+BT 0.30 0.30 0.40 rg /F2 8 Tf 1 0 0 1 500.00 295.00 Tm (Usage) Tj ET
+0.80 w 0.70 0.70 0.80 RG 50.00 292.00 m 545.00 292.00 l S
+BT 0.10 0.10 0.10 rg /F1 8 Tf 1 0 0 1 55.00 279.00 Tm (Direct Mapping) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8 Tf 1 0 0 1 160.00 279.00 Tm (1) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8 Tf 1 0 0 1 215.00 279.00 Tm (Cache Lines) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8 Tf 1 0 0 1 280.00 279.00 Tm (Highest) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8 Tf 1 0 0 1 370.00 279.00 Tm (Lowest \(1\)) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8 Tf 1 0 0 1 440.00 279.00 Tm (Fixed Line) Tj ET
+BT 0.20 0.30 0.60 rg /F2 8 Tf 1 0 0 1 500.00 279.00 Tm (L1 Caches) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8 Tf 1 0 0 1 55.00 264.00 Tm (2-Way Set Assoc.) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8 Tf 1 0 0 1 160.00 264.00 Tm (2) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8 Tf 1 0 0 1 215.00 264.00 Tm (Lines / 2) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8 Tf 1 0 0 1 280.00 264.00 Tm (Moderate) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8 Tf 1 0 0 1 370.00 264.00 Tm (Low \(2\)) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8 Tf 1 0 0 1 440.00 264.00 Tm (FIFO / LRU) Tj ET
+BT 0.20 0.30 0.60 rg /F2 8 Tf 1 0 0 1 500.00 264.00 Tm (L1 / L2) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8 Tf 1 0 0 1 55.00 249.00 Tm (4-Way Set Assoc.) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8 Tf 1 0 0 1 160.00 249.00 Tm (4) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8 Tf 1 0 0 1 215.00 249.00 Tm (Lines / 4) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8 Tf 1 0 0 1 280.00 249.00 Tm (Low) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8 Tf 1 0 0 1 370.00 249.00 Tm (Medium \(4\)) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8 Tf 1 0 0 1 440.00 249.00 Tm (FIFO / LRU) Tj ET
+BT 0.20 0.30 0.60 rg /F2 8 Tf 1 0 0 1 500.00 249.00 Tm (L2 / L3) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8 Tf 1 0 0 1 55.00 234.00 Tm (8-Way Set Assoc.) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8 Tf 1 0 0 1 160.00 234.00 Tm (8) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8 Tf 1 0 0 1 215.00 234.00 Tm (Lines / 8) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8 Tf 1 0 0 1 280.00 234.00 Tm (Very Low) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8 Tf 1 0 0 1 370.00 234.00 Tm (Medium \(8\)) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8 Tf 1 0 0 1 440.00 234.00 Tm (LRU / Tree) Tj ET
+BT 0.20 0.30 0.60 rg /F2 8 Tf 1 0 0 1 500.00 234.00 Tm (L3 Caches) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8 Tf 1 0 0 1 55.00 219.00 Tm (Fully Associative) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8 Tf 1 0 0 1 160.00 219.00 Tm (Lines) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8 Tf 1 0 0 1 215.00 219.00 Tm (1) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8 Tf 1 0 0 1 280.00 219.00 Tm (None) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8 Tf 1 0 0 1 370.00 219.00 Tm (High \(N\)) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8 Tf 1 0 0 1 440.00 219.00 Tm (FIFO / LRU) Tj ET
+BT 0.20 0.30 0.60 rg /F2 8 Tf 1 0 0 1 500.00 219.00 Tm (TLB / Micro) Tj ET
+endstream
+endobj
+17 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Contents 18 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> >>
+endobj
+18 0 obj
+<< /Length 5380 >>
+stream
+0.80 w 0.70 0.70 0.80 RG 50.00 800.00 m 545.00 800.00 l S
+BT 0.40 0.40 0.50 rg /F1 8.5 Tf 1 0 0 1 50.00 806.00 Tm (Cache Memory Simulator ? COA B.Tech Academic Project) Tj ET
+BT 0.20 0.35 0.70 rg /F2 8.5 Tf 1 0 0 1 375.00 806.00 Tm (Replacement Policies \(FIFO vs LRU\)) Tj ET
+0.80 w 0.80 0.80 0.80 RG 50.00 45.00 m 545.00 45.00 l S
+BT 0.50 0.50 0.50 rg /F1 8 Tf 1 0 0 1 50.00 32.00 Tm (Department of Computer Science & Engineering) Tj ET
+BT 0.50 0.50 0.50 rg /F1 8 Tf 1 0 0 1 500.00 32.00 Tm (Page 6 of 8) Tj ET
+BT 0.10 0.25 0.60 rg /F2 12 Tf 1 0 0 1 50.00 755.00 Tm (4. CACHE REPLACEMENT POLICIES: FIFO VS LRU) Tj ET
+0.98 0.98 1.00 rg 1.00 w 0.25 0.35 0.75 RG 50.00 520.00 495.00 220.00 re B
+BT 0.15 0.25 0.65 rg /F2 11 Tf 1 0 0 1 65.00 722.00 Tm (FIFO ? First In First Out Replacement Policy) Tj ET
+BT 0.10 0.10 0.10 rg /F1 9 Tf 1 0 0 1 65.00 705.00 Tm (? Principle: The block that entered the cache earliest is the first chosen for eviction.) Tj ET
+BT 0.10 0.10 0.10 rg /F1 9 Tf 1 0 0 1 65.00 690.00 Tm (? Hardware Tracking: Queue maintained per set \(std::deque in C++ simulator\).) Tj ET
+BT 0.70 0.15 0.15 rg /F2 9 Tf 1 0 0 1 65.00 675.00 Tm (? CRITICAL RULE: A cache HIT does NOT alter insertion order or reorder the FIFO queue.) Tj ET
+BT 0.10 0.10 0.10 rg /F1 9 Tf 1 0 0 1 65.00 660.00 Tm (? Vulnerability: Belady's Anomaly ? increasing cache capacity can paradoxically increase misses.) Tj ET
+BT 0.20 0.35 0.60 rg /F2 9.5 Tf 1 0 0 1 65.00 640.00 Tm (Step-by-Step FIFO Execution Trace \(Capacity = 3 Blocks\):) Tj ET
+BT 0.15 0.15 0.15 rg /F3 8.5 Tf 1 0 0 1 75.00 624.00 Tm (1. Access Block 0 \(Miss\): Queue = [B0] \(Oldest: B0\)) Tj ET
+BT 0.15 0.15 0.15 rg /F3 8.5 Tf 1 0 0 1 75.00 610.00 Tm (2. Access Block 1 \(Miss\): Queue = [B0, B1] \(Oldest: B0\)) Tj ET
+BT 0.15 0.15 0.15 rg /F3 8.5 Tf 1 0 0 1 75.00 596.00 Tm (3. Access Block 2 \(Miss\): Queue = [B0, B1, B2] \(Oldest: B0\)) Tj ET
+BT 0.15 0.15 0.15 rg /F3 8.5 Tf 1 0 0 1 75.00 582.00 Tm (4. Access Block 0 \(HIT\):  Queue = [B0, B1, B2] <-- Invariant: B0 remains oldest despite hit!) Tj ET
+BT 0.15 0.15 0.15 rg /F3 8.5 Tf 1 0 0 1 75.00 568.00 Tm (5. Access Block 3 \(Miss\): Queue full! Evict oldest \(B0\). Queue = [B1, B2, B3]) Tj ET
+0.97 1.00 0.97 rg 1.00 w 0.20 0.60 0.30 RG 50.00 280.00 495.00 220.00 re B
+BT 0.10 0.45 0.20 rg /F2 11 Tf 1 0 0 1 65.00 482.00 Tm (LRU ? Least Recently Used Replacement Policy) Tj ET
+BT 0.10 0.10 0.10 rg /F1 9 Tf 1 0 0 1 65.00 465.00 Tm (? Principle: The block that has not been referenced for the longest time is chosen for eviction.) Tj ET
+BT 0.10 0.10 0.10 rg /F1 9 Tf 1 0 0 1 65.00 450.00 Tm (? Hardware Tracking: High-resolution timestamp counter updated on EVERY hit or miss access.) Tj ET
+BT 0.10 0.50 0.25 rg /F2 9 Tf 1 0 0 1 65.00 435.00 Tm (? CRITICAL RULE: A cache HIT updates the block's timestamp, protecting it from upcoming eviction.) Tj ET
+BT 0.10 0.10 0.10 rg /F1 9 Tf 1 0 0 1 65.00 420.00 Tm (? Superiority: Directly aligns with the principle of temporal locality. Immune to Belady's Anomaly.) Tj ET
+BT 0.15 0.40 0.20 rg /F2 9.5 Tf 1 0 0 1 65.00 400.00 Tm (Step-by-Step LRU Execution Trace on Identical Sequence \(Capacity = 3 Blocks\):) Tj ET
+BT 0.15 0.15 0.15 rg /F3 8.5 Tf 1 0 0 1 75.00 384.00 Tm (1. Access Block 0 \(Miss, t=1\): State = {B0: t=1}) Tj ET
+BT 0.15 0.15 0.15 rg /F3 8.5 Tf 1 0 0 1 75.00 370.00 Tm (2. Access Block 1 \(Miss, t=2\): State = {B0: t=1, B1: t=2}) Tj ET
+BT 0.15 0.15 0.15 rg /F3 8.5 Tf 1 0 0 1 75.00 356.00 Tm (3. Access Block 2 \(Miss, t=3\): State = {B0: t=1, B1: t=2, B2: t=3}) Tj ET
+BT 0.15 0.15 0.15 rg /F3 8.5 Tf 1 0 0 1 75.00 342.00 Tm (4. Access Block 0 \(HIT,  t=4\): State = {B1: t=2, B2: t=3, B0: t=4} <-- B0 timestamp refreshed to t=4!) Tj ET
+BT 0.15 0.15 0.15 rg /F3 8.5 Tf 1 0 0 1 75.00 328.00 Tm (5. Access Block 3 \(Miss, t=5\): Queue full! Evict least recent \(B1, t=2\). State = {B2, B0, B3}) Tj ET
+1.00 0.99 0.95 rg 1.00 w 0.80 0.60 0.20 RG 50.00 80.00 495.00 185.00 re B
+BT 0.60 0.35 0.05 rg /F2 10 Tf 1 0 0 1 65.00 245.00 Tm (Key Behavioral Divergence Proven by Automated Tests:) Tj ET
+BT 0.10 0.10 0.10 rg /F1 9 Tf 1 0 0 1 65.00 228.00 Tm (In our test suite \('FIFO vs LRU Difference'\), we pass the access sequence: [0, 4, 8, 12, 0, 4, 8, 16]) Tj ET
+BT 0.10 0.10 0.10 rg /F1 9 Tf 1 0 0 1 65.00 214.00 Tm (into a 4-line Fully Associative cache:) Tj ET
+BT 0.10 0.10 0.10 rg /F1 9 Tf 1 0 0 1 75.00 198.00 Tm (? With FIFO: Hits on 0, 4, 8 do NOT protect them. When 16 arrives, Block 0 \(the oldest\) is evicted.) Tj ET
+BT 0.15 0.50 0.20 rg /F2 9 Tf 1 0 0 1 75.00 182.00 Tm (? With LRU:  Hits on 0, 4, 8 refresh their timestamps. When 16 arrives, Block 12 \(unaccessed since t=4\) is evicted.) Tj ET
+BT 0.10 0.10 0.10 rg /F1 9 Tf 1 0 0 1 75.00 166.00 Tm (? Result: LRU achieves higher long-term hit rates for typical program loops with repeated references.) Tj ET
+BT 0.10 0.25 0.60 rg /F2 10 Tf 1 0 0 1 65.00 145.00 Tm (Performance Metric Formulation:) Tj ET
+BT 0.10 0.10 0.10 rg /F3 9 Tf 1 0 0 1 75.00 128.00 Tm (Hit Ratio = Hits / Total | Miss Ratio = Misses / Total | Hit% = Hit Ratio * 100 | Miss% = Miss Ratio * 100) Tj ET
+BT 0.10 0.10 0.10 rg /F3 9 Tf 1 0 0 1 75.00 112.00 Tm (Effective Memory Access Time \(EMAT\) = Hit_Time + \(Miss_Rate * Miss_Penalty\)) Tj ET
+BT 0.10 0.50 0.20 rg /F2 9 Tf 1 0 0 1 75.00 96.00 Tm (Invariant Guaranteed by Engine: Hit_Percentage + Miss_Percentage = 100.0% exactly.) Tj ET
+endstream
+endobj
+19 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Contents 20 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> >>
+endobj
+20 0 obj
+<< /Length 7922 >>
+stream
+0.80 w 0.70 0.70 0.80 RG 50.00 800.00 m 545.00 800.00 l S
+BT 0.40 0.40 0.50 rg /F1 8.5 Tf 1 0 0 1 50.00 806.00 Tm (Cache Memory Simulator ? COA B.Tech Academic Project) Tj ET
+BT 0.20 0.35 0.70 rg /F2 8.5 Tf 1 0 0 1 405.00 806.00 Tm (Demonstration 1 Verification) Tj ET
+0.80 w 0.80 0.80 0.80 RG 50.00 45.00 m 545.00 45.00 l S
+BT 0.50 0.50 0.50 rg /F1 8 Tf 1 0 0 1 50.00 32.00 Tm (Department of Computer Science & Engineering) Tj ET
+BT 0.50 0.50 0.50 rg /F1 8 Tf 1 0 0 1 500.00 32.00 Tm (Page 7 of 8) Tj ET
+BT 0.10 0.25 0.60 rg /F2 12 Tf 1 0 0 1 50.00 755.00 Tm (5. DETAILED VERIFICATION: SAMPLE DEMONSTRATION 1) Tj ET
+0.96 0.98 1.00 rg 1.00 w 0.30 0.50 0.80 RG 50.00 680.00 495.00 60.00 re B
+BT 0.15 0.30 0.60 rg /F2 10 Tf 1 0 0 1 60.00 725.00 Tm (Sample Demo 1 Configuration Parameters:) Tj ET
+BT 0.10 0.10 0.10 rg /F1 9 Tf 1 0 0 1 60.00 708.00 Tm (Main Memory = 256 Bytes | Cache Size = 64 Bytes | Block Size = 4 Bytes | Direct Mapping \(16 Lines\)) Tj ET
+BT 0.10 0.20 0.50 rg /F2 9.5 Tf 1 0 0 1 60.00 692.00 Tm (Access Address Sequence: 0, 4, 0, 64, 4, 64) Tj ET
+1.00 1.00 1.00 rg 1.00 w 0.80 0.85 0.90 RG 50.00 390.00 495.00 275.00 re B
+BT 0.20 0.25 0.40 rg /F2 8.5 Tf 1 0 0 1 55.00 650.00 Tm (Step) Tj ET
+BT 0.20 0.25 0.40 rg /F2 8.5 Tf 1 0 0 1 85.00 650.00 Tm (Address) Tj ET
+BT 0.20 0.25 0.40 rg /F2 8.5 Tf 1 0 0 1 135.00 650.00 Tm (Block) Tj ET
+BT 0.20 0.25 0.40 rg /F2 8.5 Tf 1 0 0 1 170.00 650.00 Tm (Line) Tj ET
+BT 0.20 0.25 0.40 rg /F2 8.5 Tf 1 0 0 1 200.00 650.00 Tm (Tag) Tj ET
+BT 0.20 0.25 0.40 rg /F2 8.5 Tf 1 0 0 1 225.00 650.00 Tm (Offset) Tj ET
+BT 0.20 0.25 0.40 rg /F2 8.5 Tf 1 0 0 1 265.00 650.00 Tm (Outcome) Tj ET
+BT 0.20 0.25 0.40 rg /F2 8.5 Tf 1 0 0 1 345.00 650.00 Tm (Action & Cache State Change) Tj ET
+1.00 w 0.60 0.70 0.80 RG 50.00 646.00 m 545.00 646.00 l S
+BT 0.10 0.10 0.10 rg /F1 8.5 Tf 1 0 0 1 60.00 625.00 Tm (1) Tj ET
+BT 0.10 0.10 0.10 rg /F3 8.5 Tf 1 0 0 1 95.00 625.00 Tm (0) Tj ET
+BT 0.10 0.10 0.10 rg /F3 8.5 Tf 1 0 0 1 140.00 625.00 Tm (0) Tj ET
+BT 0.10 0.10 0.10 rg /F3 8.5 Tf 1 0 0 1 175.00 625.00 Tm (0) Tj ET
+BT 0.10 0.10 0.10 rg /F3 8.5 Tf 1 0 0 1 205.00 625.00 Tm (0) Tj ET
+BT 0.10 0.10 0.10 rg /F3 8.5 Tf 1 0 0 1 235.00 625.00 Tm (0) Tj ET
+BT 0.80 0.15 0.15 rg /F2 8.5 Tf 1 0 0 1 265.00 625.00 Tm (MISS) Tj ET
+BT 0.10 0.10 0.10 rg /F1 7.8 Tf 1 0 0 1 345.00 625.00 Tm (Cold miss. Line 0 valid=1, Tag=0, Block=0 stored.) Tj ET
+0.50 w 0.92 0.92 0.92 RG 50.00 617.00 m 545.00 617.00 l S
+BT 0.10 0.10 0.10 rg /F1 8.5 Tf 1 0 0 1 60.00 590.00 Tm (2) Tj ET
+BT 0.10 0.10 0.10 rg /F3 8.5 Tf 1 0 0 1 95.00 590.00 Tm (4) Tj ET
+BT 0.10 0.10 0.10 rg /F3 8.5 Tf 1 0 0 1 140.00 590.00 Tm (1) Tj ET
+BT 0.10 0.10 0.10 rg /F3 8.5 Tf 1 0 0 1 175.00 590.00 Tm (1) Tj ET
+BT 0.10 0.10 0.10 rg /F3 8.5 Tf 1 0 0 1 205.00 590.00 Tm (0) Tj ET
+BT 0.10 0.10 0.10 rg /F3 8.5 Tf 1 0 0 1 235.00 590.00 Tm (0) Tj ET
+BT 0.80 0.15 0.15 rg /F2 8.5 Tf 1 0 0 1 265.00 590.00 Tm (MISS) Tj ET
+BT 0.10 0.10 0.10 rg /F1 7.8 Tf 1 0 0 1 345.00 590.00 Tm (Cold miss. Line 1 valid=1, Tag=0, Block=1 stored.) Tj ET
+0.50 w 0.92 0.92 0.92 RG 50.00 582.00 m 545.00 582.00 l S
+BT 0.10 0.10 0.10 rg /F1 8.5 Tf 1 0 0 1 60.00 555.00 Tm (3) Tj ET
+BT 0.10 0.10 0.10 rg /F3 8.5 Tf 1 0 0 1 95.00 555.00 Tm (0) Tj ET
+BT 0.10 0.10 0.10 rg /F3 8.5 Tf 1 0 0 1 140.00 555.00 Tm (0) Tj ET
+BT 0.10 0.10 0.10 rg /F3 8.5 Tf 1 0 0 1 175.00 555.00 Tm (0) Tj ET
+BT 0.10 0.10 0.10 rg /F3 8.5 Tf 1 0 0 1 205.00 555.00 Tm (0) Tj ET
+BT 0.10 0.10 0.10 rg /F3 8.5 Tf 1 0 0 1 235.00 555.00 Tm (0) Tj ET
+BT 0.10 0.55 0.25 rg /F2 8.5 Tf 1 0 0 1 265.00 555.00 Tm (HIT) Tj ET
+BT 0.10 0.10 0.10 rg /F1 7.8 Tf 1 0 0 1 345.00 555.00 Tm (Cache Line 0 valid bit=1, Tag 0 matches requested tag.) Tj ET
+0.50 w 0.92 0.92 0.92 RG 50.00 547.00 m 545.00 547.00 l S
+BT 0.10 0.10 0.10 rg /F1 8.5 Tf 1 0 0 1 60.00 520.00 Tm (4) Tj ET
+BT 0.10 0.10 0.10 rg /F3 8.5 Tf 1 0 0 1 95.00 520.00 Tm (64) Tj ET
+BT 0.10 0.10 0.10 rg /F3 8.5 Tf 1 0 0 1 140.00 520.00 Tm (16) Tj ET
+BT 0.10 0.10 0.10 rg /F3 8.5 Tf 1 0 0 1 175.00 520.00 Tm (0) Tj ET
+BT 0.10 0.10 0.10 rg /F3 8.5 Tf 1 0 0 1 205.00 520.00 Tm (1) Tj ET
+BT 0.10 0.10 0.10 rg /F3 8.5 Tf 1 0 0 1 235.00 520.00 Tm (0) Tj ET
+BT 0.80 0.50 0.05 rg /F2 8.5 Tf 1 0 0 1 265.00 520.00 Tm (MISS_REPLACE) Tj ET
+BT 0.10 0.10 0.10 rg /F1 7.8 Tf 1 0 0 1 345.00 520.00 Tm (Line 0 collision! Evicted Block 0, loaded Block 16 \(Tag 1\).) Tj ET
+0.50 w 0.92 0.92 0.92 RG 50.00 512.00 m 545.00 512.00 l S
+BT 0.10 0.10 0.10 rg /F1 8.5 Tf 1 0 0 1 60.00 485.00 Tm (5) Tj ET
+BT 0.10 0.10 0.10 rg /F3 8.5 Tf 1 0 0 1 95.00 485.00 Tm (4) Tj ET
+BT 0.10 0.10 0.10 rg /F3 8.5 Tf 1 0 0 1 140.00 485.00 Tm (1) Tj ET
+BT 0.10 0.10 0.10 rg /F3 8.5 Tf 1 0 0 1 175.00 485.00 Tm (1) Tj ET
+BT 0.10 0.10 0.10 rg /F3 8.5 Tf 1 0 0 1 205.00 485.00 Tm (0) Tj ET
+BT 0.10 0.10 0.10 rg /F3 8.5 Tf 1 0 0 1 235.00 485.00 Tm (0) Tj ET
+BT 0.10 0.55 0.25 rg /F2 8.5 Tf 1 0 0 1 265.00 485.00 Tm (HIT) Tj ET
+BT 0.10 0.10 0.10 rg /F1 7.8 Tf 1 0 0 1 345.00 485.00 Tm (Cache Line 1 valid bit=1, Tag 0 matches requested tag.) Tj ET
+0.50 w 0.92 0.92 0.92 RG 50.00 477.00 m 545.00 477.00 l S
+BT 0.10 0.10 0.10 rg /F1 8.5 Tf 1 0 0 1 60.00 450.00 Tm (6) Tj ET
+BT 0.10 0.10 0.10 rg /F3 8.5 Tf 1 0 0 1 95.00 450.00 Tm (64) Tj ET
+BT 0.10 0.10 0.10 rg /F3 8.5 Tf 1 0 0 1 140.00 450.00 Tm (16) Tj ET
+BT 0.10 0.10 0.10 rg /F3 8.5 Tf 1 0 0 1 175.00 450.00 Tm (0) Tj ET
+BT 0.10 0.10 0.10 rg /F3 8.5 Tf 1 0 0 1 205.00 450.00 Tm (1) Tj ET
+BT 0.10 0.10 0.10 rg /F3 8.5 Tf 1 0 0 1 235.00 450.00 Tm (0) Tj ET
+BT 0.10 0.55 0.25 rg /F2 8.5 Tf 1 0 0 1 265.00 450.00 Tm (HIT) Tj ET
+BT 0.10 0.10 0.10 rg /F1 7.8 Tf 1 0 0 1 345.00 450.00 Tm (Cache Line 0 valid bit=1, Tag 1 matches requested tag.) Tj ET
+0.50 w 0.92 0.92 0.92 RG 50.00 442.00 m 545.00 442.00 l S
+0.95 0.98 0.95 rg 1.20 w 0.25 0.65 0.35 RG 50.00 240.00 495.00 135.00 re B
+BT 0.10 0.45 0.20 rg /F2 10.5 Tf 1 0 0 1 65.00 355.00 Tm (Exact Statistical Agreement with Problem Specification:) Tj ET
+BT 0.20 0.25 0.30 rg /F2 9.5 Tf 1 0 0 1 75.00 335.00 Tm (Total Memory Accesses:) Tj ET
+BT 0.05 0.45 0.20 rg /F1 9.5 Tf 1 0 0 1 240.00 335.00 Tm (6 Accesses) Tj ET
+BT 0.20 0.25 0.30 rg /F2 9.5 Tf 1 0 0 1 75.00 319.00 Tm (Cache Hits:) Tj ET
+BT 0.05 0.45 0.20 rg /F1 9.5 Tf 1 0 0 1 240.00 319.00 Tm (3 Hits) Tj ET
+BT 0.20 0.25 0.30 rg /F2 9.5 Tf 1 0 0 1 75.00 303.00 Tm (Cache Misses:) Tj ET
+BT 0.05 0.45 0.20 rg /F1 9.5 Tf 1 0 0 1 240.00 303.00 Tm (3 Misses \(2 Cold Misses + 1 Conflict Miss\)) Tj ET
+BT 0.20 0.25 0.30 rg /F2 9.5 Tf 1 0 0 1 75.00 287.00 Tm (Hit Ratio:) Tj ET
+BT 0.05 0.45 0.20 rg /F1 9.5 Tf 1 0 0 1 240.00 287.00 Tm (0.5000 \(50.00%\)) Tj ET
+BT 0.20 0.25 0.30 rg /F2 9.5 Tf 1 0 0 1 75.00 271.00 Tm (Miss Ratio:) Tj ET
+BT 0.05 0.45 0.20 rg /F1 9.5 Tf 1 0 0 1 240.00 271.00 Tm (0.5000 \(50.00%\)) Tj ET
+BT 0.20 0.25 0.30 rg /F2 9.5 Tf 1 0 0 1 75.00 255.00 Tm (Verification Sum:) Tj ET
+BT 0.05 0.45 0.20 rg /F1 9.5 Tf 1 0 0 1 240.00 255.00 Tm (50.00% + 50.00% = 100.0% EXACT) Tj ET
+0.99 0.99 1.00 rg 1.00 w 0.70 0.75 0.85 RG 50.00 80.00 495.00 145.00 re B
+BT 0.15 0.30 0.60 rg /F2 10 Tf 1 0 0 1 65.00 210.00 Tm (Additional Supported Demonstrations Pre-Configured in Simulator:) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8.5 Tf 1 0 0 1 75.00 192.00 Tm (? Demo 2 ? Fully Associative \(FIFO\): 16B cache, 4 lines; demonstrates cold miss sequence & oldest eviction.) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8.5 Tf 1 0 0 1 75.00 177.00 Tm (? Demo 3 ? Fully Associative \(LRU\): Same sequence; demonstrates how hit recency protects blocks from eviction.) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8.5 Tf 1 0 0 1 75.00 162.00 Tm (? Demo 4 ? 2-Way Set Associative \(LRU\): 32B cache, 4 sets; demonstrates set indexing and intra-set replacement.) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8.5 Tf 1 0 0 1 75.00 147.00 Tm (? Demo 5 ? FIFO vs LRU Divergence: Demonstrates clear victim selection divergence under repeated loop hits.) Tj ET
+BT 0.10 0.40 0.20 rg /F2 9 Tf 1 0 0 1 75.00 128.00 Tm (All demonstrations execute dynamically through the simulation engine; zero hardcoding.) Tj ET
+endstream
+endobj
+21 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Contents 22 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> >>
+endobj
+22 0 obj
+<< /Length 5816 >>
+stream
+0.80 w 0.70 0.70 0.80 RG 50.00 800.00 m 545.00 800.00 l S
+BT 0.40 0.40 0.50 rg /F1 8.5 Tf 1 0 0 1 50.00 806.00 Tm (Cache Memory Simulator ? COA B.Tech Academic Project) Tj ET
+BT 0.20 0.35 0.70 rg /F2 8.5 Tf 1 0 0 1 385.00 806.00 Tm (Architecture, Tests & Viva Guide) Tj ET
+0.80 w 0.80 0.80 0.80 RG 50.00 45.00 m 545.00 45.00 l S
+BT 0.50 0.50 0.50 rg /F1 8 Tf 1 0 0 1 50.00 32.00 Tm (Department of Computer Science & Engineering) Tj ET
+BT 0.50 0.50 0.50 rg /F1 8 Tf 1 0 0 1 500.00 32.00 Tm (Page 8 of 8) Tj ET
+BT 0.10 0.25 0.60 rg /F2 12 Tf 1 0 0 1 50.00 755.00 Tm (6. SYSTEM ARCHITECTURE, TEST SUITE & VIVA VOCE GUIDE) Tj ET
+0.98 0.99 1.00 rg 1.00 w 0.30 0.45 0.75 RG 50.00 560.00 495.00 185.00 re B
+BT 0.15 0.25 0.60 rg /F2 10.5 Tf 1 0 0 1 65.00 727.00 Tm (Automated Test Suite Verification Summary \(90 / 90 Tests Passed = 100%\)) Tj ET
+BT 0.20 0.25 0.35 rg /F2 8 Tf 1 0 0 1 65.00 707.00 Tm (Configuration Validation \(8 Tests\):) Tj ET
+BT 0.10 0.10 0.10 rg /F1 7.8 Tf 1 0 0 1 230.00 707.00 Tm (Powers of two, cache >= block, lines % assoc, bounds check.) Tj ET
+BT 0.10 0.55 0.20 rg /F2 8 Tf 1 0 0 1 485.00 707.00 Tm (8/8 PASS) Tj ET
+BT 0.20 0.25 0.35 rg /F2 8 Tf 1 0 0 1 65.00 690.00 Tm (Direct Mapping - Demo 1 \(15 Tests\):) Tj ET
+BT 0.10 0.10 0.10 rg /F1 7.8 Tf 1 0 0 1 230.00 690.00 Tm (Verified exact 6-step events, block math, line index, tag calculation.) Tj ET
+BT 0.10 0.55 0.20 rg /F2 8 Tf 1 0 0 1 485.00 690.00 Tm (15/15 PASS) Tj ET
+BT 0.20 0.25 0.35 rg /F2 8 Tf 1 0 0 1 65.00 673.00 Tm (Fully Associative FIFO \(4 Tests\):) Tj ET
+BT 0.10 0.10 0.10 rg /F1 7.8 Tf 1 0 0 1 230.00 673.00 Tm (Cold misses, queue insertion tracking, oldest-block eviction.) Tj ET
+BT 0.10 0.55 0.20 rg /F2 8 Tf 1 0 0 1 485.00 673.00 Tm (4/4 PASS) Tj ET
+BT 0.20 0.25 0.35 rg /F2 8 Tf 1 0 0 1 65.00 656.00 Tm (Fully Associative LRU \(4 Tests\):) Tj ET
+BT 0.10 0.10 0.10 rg /F1 7.8 Tf 1 0 0 1 230.00 656.00 Tm (Access timestamp refresh, recency protection, least-recent eviction.) Tj ET
+BT 0.10 0.55 0.20 rg /F2 8 Tf 1 0 0 1 485.00 656.00 Tm (4/4 PASS) Tj ET
+BT 0.20 0.25 0.35 rg /F2 8 Tf 1 0 0 1 65.00 639.00 Tm (Set Associative LRU \(5 Tests\):) Tj ET
+BT 0.10 0.10 0.10 rg /F1 7.8 Tf 1 0 0 1 230.00 639.00 Tm (Multi-way set partitioning, set index modulus, intra-set LRU.) Tj ET
+BT 0.10 0.55 0.20 rg /F2 8 Tf 1 0 0 1 485.00 639.00 Tm (5/5 PASS) Tj ET
+BT 0.20 0.25 0.35 rg /F2 8 Tf 1 0 0 1 65.00 622.00 Tm (Statistical Invariants \(5 Tests\):) Tj ET
+BT 0.10 0.10 0.10 rg /F1 7.8 Tf 1 0 0 1 230.00 622.00 Tm (Hit% + Miss% = 100%, zero-access div-by-zero protection.) Tj ET
+BT 0.10 0.55 0.20 rg /F2 8 Tf 1 0 0 1 485.00 622.00 Tm (5/5 PASS) Tj ET
+BT 0.20 0.25 0.35 rg /F2 8 Tf 1 0 0 1 65.00 605.00 Tm (Address Breakdown \(5 Tests\):) Tj ET
+BT 0.10 0.10 0.10 rg /F1 7.8 Tf 1 0 0 1 230.00 605.00 Tm (Bit-width derivations, Tag, Index, Offset field extraction.) Tj ET
+BT 0.10 0.55 0.20 rg /F2 8 Tf 1 0 0 1 485.00 605.00 Tm (5/5 PASS) Tj ET
+BT 0.20 0.25 0.35 rg /F2 8 Tf 1 0 0 1 65.00 588.00 Tm (Flask REST API Suite \(40 Tests\):) Tj ET
+BT 0.10 0.10 0.10 rg /F1 7.8 Tf 1 0 0 1 230.00 588.00 Tm (Health check, algorithm list, configure validation, simulate, reset.) Tj ET
+BT 0.10 0.55 0.20 rg /F2 8 Tf 1 0 0 1 485.00 588.00 Tm (40/40 PASS) Tj ET
+BT 0.10 0.25 0.60 rg /F2 11 Tf 1 0 0 1 50.00 540.00 Tm (Viva Voce Examination Questions & Answers \(Frequently Asked Questions\):) Tj ET
+BT 0.15 0.30 0.60 rg /F2 8.5 Tf 1 0 0 1 55.00 515.00 Tm (Q1: Why must block size and cache size be powers of two?) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8 Tf 1 0 0 1 65.00 502.00 Tm (A1: Powers of two allow the hardware to extract offset, index, and tag fields using simple bitwise masking and shifts \(O\(1\) logic gates\) rather than costly division and remainder circuits.) Tj ET
+BT 0.15 0.30 0.60 rg /F2 8.5 Tf 1 0 0 1 55.00 477.00 Tm (Q2: Why does a cache hit NOT reset or update the FIFO queue?) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8 Tf 1 0 0 1 65.00 464.00 Tm (A2: First-In First-Out strictly tracks the chronological arrival \(insertion\) of blocks into cache lines. Hit count or reference recency is completely ignored in FIFO; updating recency on hits is the core definition of LRU.) Tj ET
+BT 0.15 0.30 0.60 rg /F2 8.5 Tf 1 0 0 1 55.00 439.00 Tm (Q3: What are the primary trade-offs between Direct and 4-Way Set Associative caches?) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8 Tf 1 0 0 1 65.00 426.00 Tm (A3: Direct mapping requires only 1 comparator and offers the fastest access time, but suffers from high conflict misses. 4-way set associative requires 4 comparators and slightly more routing area, but drastically reduces conflict misses.) Tj ET
+BT 0.15 0.30 0.60 rg /F2 8.5 Tf 1 0 0 1 55.00 401.00 Tm (Q4: Explain how backward navigation \('Previous Step'\) is implemented.) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8 Tf 1 0 0 1 65.00 388.00 Tm (A4: For every simulated access, the engine records an immutable deep snapshot of all cache lines \(valid bit, tag, block\) and running statistics. Navigating backward restores the exact recorded snapshot rather than guessing.) Tj ET
+BT 0.15 0.30 0.60 rg /F2 8.5 Tf 1 0 0 1 55.00 363.00 Tm (Q5: What is Belady's Anomaly and does it affect LRU?) Tj ET
+BT 0.10 0.10 0.10 rg /F1 8 Tf 1 0 0 1 65.00 350.00 Tm (A5: Belady's Anomaly is a counter-intuitive phenomenon where increasing cache capacity leads to more misses. It can occur in FIFO, but is mathematically impossible in LRU because LRU belongs to the class of 'Stack Algorithms'.) Tj ET
+0.95 0.98 0.95 rg 1.00 w 0.20 0.60 0.30 RG 50.00 80.00 495.00 45.00 re B
+BT 0.10 0.45 0.20 rg /F2 9.5 Tf 1 0 0 1 65.00 107.00 Tm (FINAL VERIFICATION: The simulator is complete, fully functional, and ready for viva defense.) Tj ET
+BT 0.20 0.20 0.20 rg /F1 8.5 Tf 1 0 0 1 65.00 92.00 Tm (To launch the simulator locally: Run start_server.bat and navigate to http://127.0.0.1:5000) Tj ET
+endstream
+endobj
+xref
+0 23
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000169 00000 n 
+0000000266 00000 n 
+0000000368 00000 n 
+0000000463 00000 n 
+0000000563 00000 n 
+0000000725 00000 n 
+0000003561 00000 n 
+0000003724 00000 n 
+0000007575 00000 n 
+0000007739 00000 n 
+0000015064 00000 n 
+0000015228 00000 n 
+0000021386 00000 n 
+0000021550 00000 n 
+0000028415 00000 n 
+0000028579 00000 n 
+0000034012 00000 n 
+0000034176 00000 n 
+0000042151 00000 n 
+0000042315 00000 n 
+trailer
+<< /Size 23 /Root 1 0 R >>
+startxref
+48184
+%%EOF
