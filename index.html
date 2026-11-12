@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cache Memory Simulator – COA B.Tech Project</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<!-- ============================================================
+     NAVIGATION BAR
+     ============================================================ -->
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a class="nav-brand" href="#" data-page="home" data-nav>
+      <span class="brand-icon">⚡</span>
+      Cache Memory Simulator
+    </a>
+    <ul class="nav-links">
+      <li><a href="#" data-page="home"      data-nav>🏠 Home</a></li>
+      <li><a href="#" data-page="configure" data-nav>⚙️ Configure</a></li>
+      <li><a href="#" data-page="simulate"  data-nav>▶ Simulate</a></li>
+      <li><a href="#" data-page="visualize" data-nav>🎨 Visualize</a></li>
+      <li><a href="#" data-page="stats"     data-nav>📊 Statistics</a></li>
+      <li><a href="#" data-page="learn"     data-nav>📚 Learn</a></li>
+      <li><a href="#" data-page="about"     data-nav>ℹ️ About</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ============================================================
+     PAGE 1 – HOME / DASHBOARD
+     ============================================================ -->
+<div class="page" id="page-home">
+
+  <div class="hero">
+    <div class="hero-badge">COA B.Tech CSE PROJECT</div>
+    <h1>Cache Memory Simulator</h1>
+    <p class="hero-subtitle">
+      An interactive educational simulator for Computer Organization &amp; Architecture.
+      Visualize Direct, Fully Associative, and Set Associative cache mapping with
+      FIFO and LRU replacement policies — step by step.
+    </p>
+    <div>
+      <button class="hero-btn" data-nav-to="configure">⚙️ Configure Cache</button>
+      <button class="hero-btn secondary" data-nav-to="learn">📚 Learn Concepts</button>
+    </div>
+    <div style="margin-top:1.5rem">
+      <div id="backend-status" class="alert alert-info" style="display:inline-block;max-width:600px">
+        🔄 Checking backend connection…
+      </div>
+    </div>
+  </div>
+
+  <!-- Feature Cards -->
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-icon">🗺️</div>
+      <h3>Direct Mapping</h3>
+      <p>Each memory block maps to exactly one cache line. Fast lookup with possible conflicts.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🔀</div>
+      <h3>Fully Associative</h3>
+      <p>Any memory block can be placed in any cache line. Maximum flexibility.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🗂️</div>
+      <h3>Set Associative</h3>
+      <p>Cache divided into sets; a block maps to a fixed set but any line within it.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🔄</div>
+      <h3>FIFO Replacement</h3>
+      <p>Evict the block that has been in cache the longest (oldest insertion).</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">⏱️</div>
+      <h3>LRU Replacement</h3>
+      <p>Evict the block that was accessed least recently.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">📈</div>
+      <h3>Hit/Miss Statistics</h3>
+      <p>Real-time hit ratio, miss ratio, and percentage calculations from the C++ engine.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🔍</div>
+      <h3>Step-by-Step Mode</h3>
+      <p>Navigate forward and backward through every memory access with full details.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🏷️</div>
+      <h3>Address Breakdown</h3>
+      <p>See how every address is split into TAG | INDEX | OFFSET fields.</p>
+    </div>
+  </div>
+
+  <!-- Quick demo guide -->
+  <div class="container">
+    <div class="card">
+      <div class="card-title">🚀 Quick Start</div>
+      <ol style="color:var(--text-muted);line-height:2.2;margin-left:1.5rem">
+        <li>Go to <strong>Configure</strong> and set your cache parameters (or use a sample preset).</li>
+        <li>Go to <strong>Simulate</strong>, enter memory addresses, and click <em>Run Simulation</em>.</li>
+        <li>Open <strong>Visualize</strong> to see the cache state after each access with animations.</li>
+        <li>Check <strong>Statistics</strong> for hit/miss ratios and performance charts.</li>
+        <li>Visit <strong>Learn</strong> to understand every COA concept behind the simulator.</li>
+      </ol>
+    </div>
+  </div>
+
+</div><!-- /page-home -->
+
+
+<!-- ============================================================
+     PAGE 2 – CACHE CONFIGURATION
+     ============================================================ -->
+<div class="page" id="page-configure">
+  <div class="container">
+    <h2 class="section-title">⚙️ Cache Configuration</h2>
+    <p class="section-sub">Set the memory hierarchy parameters. All values are validated before simulation.</p>
+
+    <div id="config-alert" class="alert hidden"></div>
+
+    <div class="grid-2">
+      <!-- Left: form -->
+      <div>
+        <div class="card">
+          <div class="card-title">🗄️ Memory Sizes</div>
+
+          <div class="form-group">
+            <label class="form-label">Main Memory Size</label>
+            <div class="input-group">
+              <input type="number" id="cfg-mm-size" class="form-control" value="256" min="1" />
+              <select id="cfg-mm-unit" class="form-select" style="max-width:80px">
+                <option value="B">B</option>
+                <option value="KB">KB</option>
+                <option value="MB">MB</option>
+              </select>
+            </div>
+            <p class="form-hint">Must be a power of two (e.g. 256, 512, 1024, …)</p>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Cache Memory Size</label>
+            <div class="input-group">
+              <input type="number" id="cfg-cache-size" class="form-control" value="64" min="1" />
+              <select id="cfg-cache-unit" class="form-select" style="max-width:80px">
+                <option value="B">B</option>
+                <option value="KB">KB</option>
+                <option value="MB">MB</option>
+              </select>
+            </div>
+            <p class="form-hint">Must be a power of two and ≤ main memory size.</p>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Block / Line Size</label>
+            <div class="input-group">
+              <input type="number" id="cfg-block-size" class="form-control" value="4" min="1" />
+              <select id="cfg-block-unit" class="form-select" style="max-width:80px">
+                <option value="B">B</option>
+                <option value="KB">KB</option>
+              </select>
+            </div>
+            <p class="form-hint">Must be a power of two (e.g. 4, 8, 16, 32, …)</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">🗺️ Mapping &amp; Replacement</div>
+
+          <div class="form-group">
+            <label class="form-label">Mapping Technique</label>
+            <select id="cfg-mapping" class="form-select">
+              <option value="direct">Direct Mapping</option>
+              <option value="fully_associative">Fully Associative Mapping</option>
+              <option value="set_associative">Set Associative Mapping</option>
+            </select>
+          </div>
+
+          <div class="form-group" id="assoc-group" style="display:none">
+            <label class="form-label">Associativity (ways)</label>
+            <select id="cfg-associativity" class="form-select">
+              <option value="2">2-way</option>
+              <option value="4">4-way</option>
+              <option value="8">8-way</option>
+            </select>
+            <p class="form-hint">Number of lines per set.</p>
+          </div>
+
+          <div class="form-group" id="rep-group">
+            <label class="form-label">Replacement Policy</label>
+            <select id="cfg-replacement" class="form-select">
+              <option value="lru">LRU – Least Recently Used</option>
+              <option value="fifo">FIFO – First In First Out</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="btn-group">
+          <button class="btn btn-secondary" id="btn-validate-config">🔍 Validate</button>
+          <button class="btn btn-primary" id="btn-apply-config">✅ Apply &amp; Go to Simulate</button>
+        </div>
+      </div>
+
+      <!-- Right: summary and presets -->
+      <div>
+        <div class="card">
+          <div class="card-title">📋 Derived Parameters</div>
+          <div id="config-summary" class="text-muted" style="font-size:0.85rem">
+            Click "Validate" to see derived parameters.
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">📌 Sample Presets</div>
+          <div style="display:flex;flex-direction:column;gap:0.6rem">
+
+            <button class="btn btn-secondary btn-sm" onclick="loadPreset({main_memory_size:256,cache_size:64,block_size:4,mapping:'direct',associativity:1,replacement:'lru'})">
+              Demo 1 – Direct (256B / 64B / 4B)
+            </button>
+            <button class="btn btn-secondary btn-sm" onclick="loadPreset({main_memory_size:256,cache_size:16,block_size:4,mapping:'fully_associative',associativity:4,replacement:'fifo'})">
+              Demo 2 – Fully Assoc FIFO (16B cache)
+            </button>
+            <button class="btn btn-secondary btn-sm" onclick="loadPreset({main_memory_size:256,cache_size:16,block_size:4,mapping:'fully_associative',associativity:4,replacement:'lru'})">
+              Demo 3 – Fully Assoc LRU (16B cache)
+            </button>
+            <button class="btn btn-secondary btn-sm" onclick="loadPreset({main_memory_size:256,cache_size:32,block_size:4,mapping:'set_associative',associativity:2,replacement:'lru'})">
+              Demo 4 – 2-Way Set Assoc LRU (32B cache)
+            </button>
+            <button class="btn btn-secondary btn-sm" onclick="loadPreset({main_memory_size:1024,cache_size:128,block_size:16,mapping:'set_associative',associativity:4,replacement:'lru'})">
+              Demo 5 – 4-Way Set Assoc (1KB / 128B / 16B)
+            </button>
+          </div>
+        </div>
+
+        <!-- Address-space info box -->
+        <div class="card">
+          <div class="card-title">ℹ️ Configuration Rules</div>
+          <ul style="color:var(--text-muted);font-size:0.83rem;line-height:2;margin-left:1.2rem">
+            <li>All sizes must be a power of two.</li>
+            <li>Cache size ≤ Main memory size.</li>
+            <li>Cache size must be divisible by block size.</li>
+            <li>For Set Associative: lines must be divisible by associativity.</li>
+            <li>Replacement policy applies to Fully Associative and Set Associative.</li>
+            <li>Direct mapping uses natural fixed-line placement (no replacement policy needed).</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- /page-configure -->
+
+
+<!-- ============================================================
+     PAGE 3 – SIMULATION
+     ============================================================ -->
+<div class="page" id="page-simulate">
+  <div class="container">
+    <h2 class="section-title">▶ Run Simulation</h2>
+    <p class="section-sub">Enter memory addresses to simulate. Results come from the cache engine.</p>
+
+    <div id="sim-alert" class="alert hidden"></div>
+
+    <div class="grid-2">
+      <!-- Left: input -->
+      <div>
+        <div class="card">
+          <div class="card-title">📋 Load Sample Demonstration</div>
+          <div class="input-group">
+            <select id="sample-select" class="form-select">
+              <option value="">— choose a demo —</option>
+            </select>
+            <button class="btn btn-secondary" id="btn-load-sample">Load</button>
+          </div>
+          <p class="form-hint">Loading a sample also updates the configuration automatically.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-title">🏷️ Memory Addresses</div>
+          <div class="form-group">
+            <label class="form-label">Enter addresses (comma or space separated)</label>
+            <textarea id="sim-addresses" class="form-control" rows="4"
+              placeholder="e.g.  0, 4, 0, 64, 4, 64"></textarea>
+            <p class="form-hint">Decimal integers only. Addresses must be within main memory range.</p>
+          </div>
+
+          <div class="btn-group">
+            <button class="btn btn-primary" id="btn-run-sim">▶ Run Simulation</button>
+            <button class="btn btn-danger"  id="btn-reset-sim">🗑️ Reset</button>
+          </div>
+        </div>
+
+        <div class="card" id="sim-controls" style="display:none">
+          <div class="card-title">⏯ Step Controls</div>
+          <div id="step-counter" class="text-muted mb-1" style="font-size:0.85rem">—</div>
+          <div class="btn-group">
+            <button class="btn btn-secondary btn-sm" id="btn-prev-step">◀ Previous</button>
+            <button class="btn btn-secondary btn-sm" id="btn-next-step">Next ▶</button>
+            <button class="btn btn-secondary btn-sm" data-nav-to="visualize">🎨 View Visualization</button>
+          </div>
+          <div id="step-detail-panel" class="step-detail-panel mt-2"></div>
+          <div id="addr-breakdown-display" class="mt-2"></div>
+        </div>
+      </div>
+
+      <!-- Right: log table -->
+      <div>
+        <div class="card" style="overflow-x:auto">
+          <div class="card-title">📄 Simulation Log</div>
+          <table class="sim-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>ADDR</th>
+                <th>BLOCK</th>
+                <th>TAG</th>
+                <th>INDEX</th>
+                <th>OFFSET</th>
+                <th>RESULT</th>
+                <th>EVICTED</th>
+              </tr>
+            </thead>
+            <tbody id="sim-log-body">
+              <tr><td colspan="8" class="text-center text-muted" style="padding:2rem">Run a simulation to see results.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- /page-simulate -->
+
+
+<!-- ============================================================
+     PAGE 4 – CACHE VISUALIZATION
+     ============================================================ -->
+<div class="page" id="page-visualize">
+  <div class="container">
+    <h2 class="section-title">🎨 Cache Visualization</h2>
+    <p class="section-sub">See the CPU→Cache→RAM architecture and step through each memory access.</p>
+
+    <!-- Architecture Diagram -->
+    <div class="card">
+      <div class="card-title">🏗️ Memory Hierarchy</div>
+      <div class="arch-diagram">
+        <div class="arch-box cpu" id="arch-cpu">
+          <div class="arch-label">PROCESSOR</div>
+          <div class="arch-name">CPU</div>
+          <div class="arch-size">Registers</div>
+        </div>
+        <div class="arch-arrow" id="arch-arrow1">⟺</div>
+        <div class="arch-box cache" id="arch-cache">
+          <div class="arch-label">FAST MEMORY</div>
+          <div class="arch-name">Cache</div>
+          <div class="arch-size" id="arch-cache-size">— B</div>
+        </div>
+        <div class="arch-arrow" id="arch-arrow2">⟺</div>
+        <div class="arch-box ram" id="arch-ram">
+          <div class="arch-label">MAIN MEMORY</div>
+          <div class="arch-name">RAM</div>
+          <div class="arch-size" id="arch-mm-size">— B</div>
+        </div>
+      </div>
+      <div class="text-center mt-2">
+        <span id="arch-status" class="badge badge-info">Run simulation to see status</span>
+      </div>
+    </div>
+
+    <!-- Step navigation -->
+    <div class="card">
+      <div class="card-title">⏯ Step-by-Step Navigation</div>
+      <div class="btn-group mb-2">
+        <button class="btn btn-secondary" onclick="prevStep()">◀ Previous Step</button>
+        <button class="btn btn-primary"   onclick="nextStep()">Next Step ▶</button>
+        <button class="btn btn-secondary" data-nav-to="simulate">📋 Back to Log</button>
+      </div>
+      <div id="step-counter-vis" class="text-muted" style="font-size:0.85rem">Use the simulator to generate events.</div>
+
+      <!-- Step detail inline -->
+      <div id="step-detail-panel" class="step-detail-panel mt-2">
+        <p class="text-muted text-center" style="padding:1rem">Navigate to a step to see details.</p>
+      </div>
+      <div id="addr-breakdown-display" class="mt-1"></div>
+    </div>
+
+    <div class="grid-2">
+      <!-- Cache lines -->
+      <div class="card">
+        <div class="card-title">💾 Cache Memory State</div>
+        <div style="max-height:400px;overflow-y:auto">
+          <div id="cache-lines-container">
+            <p class="text-muted text-center mt-3">Run a simulation to see cache state.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Legend -->
+      <div class="card">
+        <div class="card-title">🎨 Legend &amp; Color Codes</div>
+        <div style="display:flex;flex-direction:column;gap:0.8rem">
+          <div class="cache-line-row state-hit">
+            <span class="line-idx">[0]</span>
+            <span class="line-valid" style="color:#22c55e">V=1</span>
+            <span class="line-data">🟢 CACHE HIT — block found in cache</span>
+          </div>
+          <div class="cache-line-row state-miss">
+            <span class="line-idx">[1]</span>
+            <span class="line-valid" style="color:#22c55e">V=1</span>
+            <span class="line-data">🔴 CACHE MISS — block loaded from RAM</span>
+          </div>
+          <div class="cache-line-row state-replace">
+            <span class="line-idx">[2]</span>
+            <span class="line-valid" style="color:#22c55e">V=1</span>
+            <span class="line-data">🟡 REPLACEMENT — evicted old block</span>
+          </div>
+          <div class="cache-line-row state-valid">
+            <span class="line-idx">[3]</span>
+            <span class="line-valid" style="color:#22c55e">V=1</span>
+            <span class="line-data">🔵 VALID — cached block (not accessed now)</span>
+          </div>
+          <div class="cache-line-row state-empty">
+            <span class="line-idx">[4]</span>
+            <span class="line-valid" style="color:#475569">V=0</span>
+            <span class="line-data">⬜ EMPTY — invalid / not yet loaded</span>
+          </div>
+        </div>
+
+        <div class="mt-3">
+          <div class="card-title" style="margin-top:1rem">📐 Address Breakdown</div>
+          <div class="addr-breakdown">
+            <div class="addr-part tag"><span class="part-label">TAG</span><span class="part-value">identifies block</span></div>
+            <div class="addr-part index"><span class="part-label">INDEX/SET</span><span class="part-value">selects line/set</span></div>
+            <div class="addr-part offset"><span class="part-label">OFFSET</span><span class="part-value">byte within block</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- /page-visualize -->
+
+
+<!-- ============================================================
+     PAGE 5 – STATISTICS DASHBOARD
+     ============================================================ -->
+<div class="page" id="page-stats">
+  <div class="container">
+    <h2 class="section-title">📊 Statistics Dashboard</h2>
+    <p class="section-sub">Real-time performance metrics from the simulation engine.</p>
+
+    <div class="stat-grid">
+      <div class="stat-card total">
+        <div class="stat-value" id="stat-total_accesses">—</div>
+        <div class="stat-label">TOTAL ACCESSES</div>
+      </div>
+      <div class="stat-card hits">
+        <div class="stat-value" id="stat-hits">—</div>
+        <div class="stat-label">CACHE HITS</div>
+      </div>
+      <div class="stat-card misses">
+        <div class="stat-value" id="stat-misses">—</div>
+        <div class="stat-label">CACHE MISSES</div>
+      </div>
+      <div class="stat-card ratio">
+        <div class="stat-value" id="stat-hit_percentage">—</div>
+        <div class="stat-label">HIT PERCENTAGE</div>
+      </div>
+      <div class="stat-card ratio">
+        <div class="stat-value" id="stat-miss_percentage">—</div>
+        <div class="stat-label">MISS PERCENTAGE</div>
+      </div>
+      <div class="stat-card ratio">
+        <div class="stat-value" id="stat-hit_ratio" style="font-size:1.5rem">—</div>
+        <div class="stat-label">HIT RATIO</div>
+      </div>
+      <div class="stat-card ratio">
+        <div class="stat-value" id="stat-miss_ratio" style="font-size:1.5rem">—</div>
+        <div class="stat-label">MISS RATIO</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">📈 Hit / Miss Ratio</div>
+      <div class="progress-bar-wrap">
+        <div class="progress-label"><span>Cache Hits</span><span id="stat-hit_percentage2">—</span></div>
+        <div class="progress-track"><div class="progress-fill hit" style="width:0%"></div></div>
+      </div>
+      <div class="progress-bar-wrap">
+        <div class="progress-label"><span>Cache Misses</span><span id="stat-miss_percentage2">—</span></div>
+        <div class="progress-track"><div class="progress-fill miss" style="width:0%"></div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">📐 Formulas Used</div>
+      <div class="formula-box">
+Hit Ratio   = Cache Hits / Total Accesses
+Miss Ratio  = Cache Misses / Total Accesses
+Hit %       = Hit Ratio × 100
+Miss %      = Miss Ratio × 100
+Verification: Hit% + Miss% = 100%
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">📋 Full Event Log (Statistics Per Step)</div>
+      <div class="overflow-x-auto">
+        <table class="sim-table">
+          <thead>
+            <tr>
+              <th>#</th><th>ADDRESS</th><th>BLOCK</th><th>TAG</th>
+              <th>INDEX</th><th>OFFSET</th><th>RESULT</th>
+              <th>TOTAL</th><th>HITS</th><th>MISSES</th><th>HIT%</th>
+            </tr>
+          </thead>
+          <tbody id="stats-log-body">
+            <tr><td colspan="11" class="text-center text-muted" style="padding:2rem">Run a simulation to populate statistics.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div><!-- /page-stats -->
+
+
+<!-- ============================================================
+     PAGE 6 – LEARN
+     ============================================================ -->
+<div class="page" id="page-learn">
+  <div class="container">
+    <h2 class="section-title">📚 Learn Cache Memory</h2>
+    <p class="section-sub">Complete COA educational guide — beginner friendly explanations with examples.</p>
+
+    <div class="learn-grid">
+
+      <!-- Sidebar nav -->
+      <aside class="learn-nav">
+        <div class="card" style="padding:1rem">
+          <ul>
+            <li><a href="#learn-intro" class="active">Introduction</a></li>
+            <li><a href="#learn-hierarchy">Memory Hierarchy</a></li>
+            <li><a href="#learn-cache">What is Cache?</a></li>
+            <li><a href="#learn-hit-miss">Hit &amp; Miss</a></li>
+            <li><a href="#learn-direct">Direct Mapping</a></li>
+            <li><a href="#learn-fa">Fully Associative</a></li>
+            <li><a href="#learn-sa">Set Associative</a></li>
+            <li><a href="#learn-fifo">FIFO Replacement</a></li>
+            <li><a href="#learn-lru">LRU Replacement</a></li>
+            <li><a href="#learn-address">Address Fields</a></li>
+            <li><a href="#learn-stats">Statistics</a></li>
+            <li><a href="#learn-compare">Comparison</a></li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- Content -->
+      <main>
+
+        <!-- INTRO -->
+        <section class="learn-section" id="learn-intro">
+          <h2>🎓 Introduction to Cache Memory</h2>
+          <p>
+            Cache memory is a small, extremely fast memory located between the CPU and main memory (RAM).
+            Its purpose is to hold copies of frequently accessed memory blocks so the CPU can retrieve
+            data quickly without waiting for slower RAM.
+          </p>
+          <div class="info-box">
+            <strong>Analogy:</strong> Think of your desk as the cache. You keep the most-used books (data)
+            on your desk (cache) so you don't have to walk to the library (RAM) every time you need them.
+          </div>
+          <p>
+            When the CPU needs data, it first checks the cache. If it finds it there (a <em>cache hit</em>),
+            it retrieves the data instantly. If not (a <em>cache miss</em>), it fetches the data from RAM
+            and also stores a copy in the cache for future use.
+          </p>
+        </section>
+
+        <!-- HIERARCHY -->
+        <section class="learn-section" id="learn-hierarchy">
+          <h2>🏗️ Memory Hierarchy</h2>
+          <p>Modern computers organize memory into a hierarchy based on speed and cost:</p>
+          <ul>
+            <li><strong>Registers</strong> — fastest, inside the CPU, tiny (bytes)</li>
+            <li><strong>L1 Cache</strong> — very fast, on-chip, small (32–64 KB)</li>
+            <li><strong>L2 Cache</strong> — fast, on-chip or near-chip (256 KB – 4 MB)</li>
+            <li><strong>L3 Cache</strong> — shared, slower (4 MB – 32 MB)</li>
+            <li><strong>RAM (Main Memory)</strong> — large, slower (4–64 GB)</li>
+            <li><strong>SSD / HDD (Secondary Storage)</strong> — huge, very slow</li>
+          </ul>
+          <div class="info-box warning">
+            <strong>Principle of Locality:</strong> Programs tend to access the same data repeatedly
+            (temporal locality) and access nearby memory addresses (spatial locality). Cache exploits
+            both principles.
+          </div>
+        </section>
+
+        <!-- CACHE -->
+        <section class="learn-section" id="learn-cache">
+          <h2>💾 Cache Memory Basics</h2>
+          <h3>Cache Lines (Cache Blocks)</h3>
+          <p>
+            Cache memory is divided into fixed-size units called <strong>cache lines</strong> (or cache blocks).
+            Each cache line holds one memory block plus a <strong>tag</strong> (to identify which memory block
+            is stored) and a <strong>valid bit</strong> (to indicate whether the data is valid).
+          </p>
+          <div class="formula-box">
+Structure of a Cache Line:
+┌─────────┬─────────────┬──────────────────────────┐
+│ Valid   │     Tag     │       Data (block)        │
+│  bit    │             │                           │
+└─────────┴─────────────┴──────────────────────────┘
+          </div>
+          <h3>Number of Cache Lines</h3>
+          <div class="formula-box">
+Number of Cache Lines = Cache Size / Block Size
+Example: 64 B cache / 4 B block = 16 cache lines
+          </div>
+          <h3>Number of Memory Blocks</h3>
+          <div class="formula-box">
+Number of Memory Blocks = Main Memory Size / Block Size
+Example: 256 B memory / 4 B block = 64 memory blocks
+          </div>
+        </section>
+
+        <!-- HIT MISS -->
+        <section class="learn-section" id="learn-hit-miss">
+          <h2>✅ Cache Hit &amp; Cache Miss</h2>
+          <h3>Cache Hit</h3>
+          <p>
+            A <strong>cache hit</strong> occurs when the CPU requests data and that data is already
+            present in the cache. The CPU retrieves it directly — fast!
+          </p>
+          <div class="info-box success">
+            <strong>Cache Hit:</strong> CPU → Cache → Found! → Return data to CPU
+          </div>
+          <h3>Cache Miss</h3>
+          <p>
+            A <strong>cache miss</strong> occurs when the requested data is NOT in the cache.
+            The CPU must fetch it from main memory (slow). The block is then loaded into the cache.
+          </p>
+          <div class="info-box">
+            <strong>Cache Miss:</strong> CPU → Cache → Not found → Go to RAM → Load block into cache → Return to CPU
+          </div>
+          <h3>Types of Cache Misses</h3>
+          <ul>
+            <li><strong>Cold Miss (Compulsory):</strong> First-ever access to a block.</li>
+            <li><strong>Conflict Miss:</strong> Two blocks map to the same line; one replaces the other.</li>
+            <li><strong>Capacity Miss:</strong> Cache is too small to hold all needed blocks.</li>
+          </ul>
+        </section>
+
+        <!-- DIRECT -->
+        <section class="learn-section" id="learn-direct">
+          <h2>🗺️ Direct Mapping</h2>
+          <p>
+            In <strong>direct mapping</strong>, each main memory block maps to exactly one specific cache line.
+            It is the simplest and fastest lookup method.
+          </p>
+          <div class="formula-box">
+Memory Block Number  = Memory Address / Block Size
+Cache Line Number    = Memory Block Number % Number of Cache Lines
+Tag                  = Memory Block Number / Number of Cache Lines
+Block Offset         = Memory Address % Block Size
+          </div>
+          <h3>Example (256B memory, 64B cache, 4B block):</h3>
+          <div class="formula-box">
+Number of cache lines = 64 / 4 = 16
+
+Address 0:   Block = 0 / 4 = 0,  Line = 0 % 16 = 0,  Tag = 0 / 16 = 0
+Address 4:   Block = 4 / 4 = 1,  Line = 1 % 16 = 1,  Tag = 1 / 16 = 0
+Address 64:  Block = 64 / 4 = 16, Line = 16 % 16 = 0, Tag = 16 / 16 = 1
+Address 128: Block = 128/4 = 32,  Line = 32 % 16 = 0,  Tag = 32/16 = 2
+          </div>
+          <div class="info-box warning">
+            <strong>Disadvantage:</strong> Addresses 0, 64, 128, 192 all map to cache line 0.
+            Accessing them alternately causes repeated evictions (conflict misses).
+          </div>
+        </section>
+
+        <!-- FA -->
+        <section class="learn-section" id="learn-fa">
+          <h2>🔀 Fully Associative Mapping</h2>
+          <p>
+            In <strong>fully associative mapping</strong>, any memory block can be placed in any cache line.
+            There is no fixed mapping between memory blocks and cache lines.
+          </p>
+          <div class="formula-box">
+Memory Block Number = Memory Address / Block Size
+Block Offset        = Memory Address % Block Size
+Tag                 = Memory Block Number  (the entire block number is the tag)
+Index               = none (search all lines)
+          </div>
+          <h3>How it works:</h3>
+          <ul>
+            <li>To find a block, the cache must search ALL cache lines (associative search).</li>
+            <li>When the cache is full and a miss occurs, a replacement algorithm decides which block to evict.</li>
+            <li>No conflict misses — most flexible, but hardware is expensive for large caches.</li>
+          </ul>
+          <div class="info-box">
+            <strong>Address format:</strong> [ TAG | OFFSET ] — no index field.
+          </div>
+        </section>
+
+        <!-- SA -->
+        <section class="learn-section" id="learn-sa">
+          <h2>🗂️ Set Associative Mapping</h2>
+          <p>
+            <strong>Set associative mapping</strong> is a compromise between direct and fully associative.
+            The cache is divided into <em>S</em> sets, each containing <em>N</em> lines (N-way).
+            A memory block maps to exactly one set but can occupy any line within that set.
+          </p>
+          <div class="formula-box">
+Number of Lines = Cache Size / Block Size
+Number of Sets  = Number of Lines / Associativity (N)
+Set Index       = Memory Block Number % Number of Sets
+Tag             = Memory Block Number / Number of Sets
+Block Offset    = Memory Address % Block Size
+          </div>
+          <h3>Example (2-way, 4 sets):</h3>
+          <div class="formula-box">
+Block 0  → Set 0  (can go to line 0 or 1 of set 0)
+Block 1  → Set 1
+Block 4  → Set 0  (same set as block 0, different tag)
+Block 8  → Set 0  (same set — if set full, replacement needed)
+          </div>
+          <div class="info-box success">
+            <strong>Advantage:</strong> Reduces conflict misses compared to direct mapping.
+            More practical than fully associative for large caches.
+          </div>
+        </section>
+
+        <!-- FIFO -->
+        <section class="learn-section" id="learn-fifo">
+          <h2>🔄 FIFO – First In First Out</h2>
+          <p>
+            The <strong>FIFO</strong> replacement policy evicts the block that was loaded into the cache
+            <em>earliest</em> (first inserted = first removed).
+          </p>
+          <h3>Key Rule:</h3>
+          <ul>
+            <li>Track the <em>insertion order</em> of blocks, not access order.</li>
+            <li>A cache <strong>hit does NOT update</strong> the block's position in the queue.</li>
+            <li>When eviction is needed, remove the block at the <em>front</em> of the queue (oldest).</li>
+          </ul>
+          <div class="formula-box">
+Queue: [B0 ← oldest,  B1,  B2,  B3 ← newest]
+
+Access B5 (miss, cache full):
+  Evict B0 (front of queue)
+  Insert B5 at back:
+Queue: [B1,  B2,  B3,  B5]
+
+Access B1 (hit):
+  Queue UNCHANGED: [B1,  B2,  B3,  B5]  ← B1 stays old!
+          </div>
+        </section>
+
+        <!-- LRU -->
+        <section class="learn-section" id="learn-lru">
+          <h2>⏱️ LRU – Least Recently Used</h2>
+          <p>
+            The <strong>LRU</strong> replacement policy evicts the block that has not been accessed
+            for the longest time — the <em>least recently used</em> block.
+          </p>
+          <h3>Key Rule:</h3>
+          <ul>
+            <li>Track the <em>last access time</em> of every block.</li>
+            <li>A cache <strong>hit DOES update</strong> the block's recency timestamp.</li>
+            <li>Evict the block with the smallest (oldest) access timestamp.</li>
+          </ul>
+          <div class="formula-box">
+State: B0(t=1), B1(t=2), B2(t=3), B3(t=4)  (t=time of last access)
+
+Access B5 (miss, cache full):
+  LRU victim = B0 (smallest t=1)
+  Insert B5 (t=5)
+State: B1(t=2), B2(t=3), B3(t=4), B5(t=5)
+
+Access B1 (hit):
+  B1 recency updated to t=6
+State: B2(t=3), B3(t=4), B5(t=5), B1(t=6)  ← B1 is now newest!
+          </div>
+          <div class="info-box">
+            <strong>FIFO vs LRU:</strong> FIFO uses insertion order; LRU uses access order.
+            LRU generally performs better because recently used data is more likely to be reused.
+          </div>
+        </section>
+
+        <!-- ADDRESS -->
+        <section class="learn-section" id="learn-address">
+          <h2>🏷️ Address Fields: TAG | INDEX | OFFSET</h2>
+          <p>
+            A memory address is split into three fields that the cache hardware uses to locate data:
+          </p>
+          <div class="formula-box">
+32-bit Address:
+┌───────────────────┬────────────┬────────────────┐
+│       TAG         │   INDEX    │     OFFSET     │
+│   (tag_bits)      │(index_bits)│  (offset_bits) │
+└───────────────────┴────────────┴────────────────┘
+
+offset_bits = log₂(Block Size)
+index_bits  = log₂(Number of Sets)      [0 for Fully Associative]
+tag_bits    = 32 - index_bits - offset_bits
+          </div>
+          <h3>Field meanings:</h3>
+          <ul>
+            <li><strong>OFFSET</strong>: Selects a specific byte within a block.</li>
+            <li><strong>INDEX / SET INDEX</strong>: Selects the cache line (DM) or set (SA).</li>
+            <li><strong>TAG</strong>: Stored in the cache line to verify which memory block is cached.</li>
+          </ul>
+          <h3>Example (64B cache, 4B block, 16 lines, Direct Mapping):</h3>
+          <div class="formula-box">
+offset_bits = log₂(4) = 2
+index_bits  = log₂(16) = 4
+tag_bits    = 32 - 4 - 2 = 26
+
+Address 68 (binary: 00000000 00000000 00000100 01000100):
+  Offset = 68 % 4 = 0        → byte 0 of the block
+  Block  = 68 / 4 = 17
+  Index  = 17 % 16 = 1       → cache line 1
+  Tag    = 17 / 16 = 1       → tag stored is 1
+          </div>
+        </section>
+
+        <!-- STATS -->
+        <section class="learn-section" id="learn-stats">
+          <h2>📊 Performance Statistics</h2>
+          <div class="formula-box">
+Total Accesses  = Total number of memory reference requests
+Cache Hits      = Number of accesses found in cache
+Cache Misses    = Number of accesses NOT in cache = Total - Hits
+
+Hit Ratio       = Cache Hits / Total Accesses
+Miss Ratio      = Cache Misses / Total Accesses
+
+Hit Percentage  = Hit Ratio  × 100%
+Miss Percentage = Miss Ratio × 100%
+
+Verification:   Hit% + Miss% = 100%  (always)
+          </div>
+          <div class="info-box success">
+            <strong>Good cache performance</strong> typically means a hit ratio above 90%.
+            Modern CPUs achieve 95%+ hit ratios with well-designed cache hierarchies.
+          </div>
+          <h3>Special Case – Zero Accesses:</h3>
+          <p>If total accesses = 0, all ratios are defined as 0 to avoid division by zero.</p>
+        </section>
+
+        <!-- COMPARE -->
+        <section class="learn-section" id="learn-compare">
+          <h2>⚖️ Mapping Technique Comparison</h2>
+          <div class="overflow-x-auto">
+            <table class="sim-table" style="font-size:0.82rem">
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th>Direct Mapping</th>
+                  <th>Fully Associative</th>
+                  <th>Set Associative</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Placement</td><td>Fixed line</td><td>Any line</td><td>Any line in a set</td></tr>
+                <tr><td>Search</td><td>O(1) one line</td><td>O(n) all lines</td><td>O(n/S) one set</td></tr>
+                <tr><td>Conflict Misses</td><td>High</td><td>None</td><td>Low</td></tr>
+                <tr><td>Hardware Cost</td><td>Low</td><td>High</td><td>Medium</td></tr>
+                <tr><td>Replacement Needed</td><td>No choice</td><td>Yes (FIFO/LRU)</td><td>Yes (FIFO/LRU)</td></tr>
+                <tr><td>Typical Use</td><td>L1 cache (simple)</td><td>TLBs</td><td>L2, L3 caches</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+</div><!-- /page-learn -->
+
+
+<!-- ============================================================
+     PAGE 7 – ABOUT PROJECT
+     ============================================================ -->
+<div class="page" id="page-about">
+  <div class="container">
+    <h2 class="section-title">ℹ️ About This Project</h2>
+    <p class="section-sub">Academic project details for COA course submission.</p>
+
+    <div class="grid-2">
+      <div>
+        <div class="card">
+          <div class="card-title">📌 Project Details</div>
+          <div class="detail-row"><span class="detail-key">Title</span><span class="detail-value">Cache Memory Simulator</span></div>
+          <div class="detail-row"><span class="detail-key">Subject</span><span class="detail-value">Computer Organization &amp; Architecture</span></div>
+          <div class="detail-row"><span class="detail-key">Program</span><span class="detail-value">B.Tech – Computer Science &amp; Engineering</span></div>
+          <div class="detail-row"><span class="detail-key">Type</span><span class="detail-value">Interactive Educational Web Simulator</span></div>
+          <div class="detail-row"><span class="detail-key">Student Name</span><span class="detail-value">[Your Name Here]</span></div>
+          <div class="detail-row"><span class="detail-key">Roll Number</span><span class="detail-value">[Your Roll Number]</span></div>
+          <div class="detail-row"><span class="detail-key">Institution</span><span class="detail-value">[Your College Name]</span></div>
+          <div class="detail-row"><span class="detail-key">Faculty Guide</span><span class="detail-value">[Faculty Name]</span></div>
+          <div class="detail-row"><span class="detail-key">Academic Year</span><span class="detail-value">2024 – 2025</span></div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">🎯 Project Objective</div>
+          <p class="text-muted" style="font-size:0.88rem;line-height:1.8">
+            To develop an interactive application that demonstrates how cache memory works between the CPU
+            and main memory. The simulator models Direct Mapping, Fully Associative Mapping, and Set
+            Associative Mapping techniques with FIFO and LRU replacement policies. It provides step-by-step
+            visualization of memory accesses, hit/miss detection, block replacement, and address field
+            calculation — making computer architecture concepts accessible to students.
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <div class="card">
+          <div class="card-title">🛠️ Technologies Used</div>
+          <div class="about-tech-grid">
+            <span class="tech-pill">C++17</span>
+            <span class="tech-pill">G++</span>
+            <span class="tech-pill">Python 3</span>
+            <span class="tech-pill">Flask</span>
+            <span class="tech-pill">Flask-CORS</span>
+            <span class="tech-pill">HTML5</span>
+            <span class="tech-pill">CSS3</span>
+            <span class="tech-pill">JavaScript ES6+</span>
+            <span class="tech-pill">REST API</span>
+            <span class="tech-pill">JSON</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">✅ Main Functionalities</div>
+          <ul style="color:var(--text-muted);font-size:0.85rem;line-height:2;margin-left:1.2rem">
+            <li>Direct Mapping simulation with tag, line &amp; offset calculation</li>
+            <li>Fully Associative Mapping with FIFO and LRU</li>
+            <li>Set Associative Mapping (N-way) with FIFO and LRU</li>
+            <li>Step-by-step simulation with forward and backward navigation</li>
+            <li>Visual cache state after every access (hit/miss/replace colors)</li>
+            <li>Address breakdown: TAG | INDEX | OFFSET fields</li>
+            <li>Real-time statistics: hit ratio, miss ratio, percentages</li>
+            <li>Sample demonstrations for all 5 mapping/replacement scenarios</li>
+            <li>Educational section explaining all COA concepts</li>
+            <li>Flask REST API backend with Python simulation engine</li>
+            <li>C++ simulation engine source code included</li>
+            <li>Input validation for all configuration parameters</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-title">📐 System Architecture</div>
+          <div class="formula-box" style="font-size:0.8rem">
+Browser (HTML/CSS/JS)
+        ↕ HTTP REST API
+Flask Backend (Python)
+        ↕ Subprocess / Direct call
+Cache Engine (Python / C++)
+        ↓
+JSON simulation results
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- /page-about -->
+
+<!-- Footer -->
+<footer>
+  <p>Cache Memory Simulator &nbsp;|&nbsp; COA B.Tech Project &nbsp;|&nbsp; Computer Organization &amp; Architecture</p>
+  <p style="margin-top:0.3rem">Built with C++17, Python Flask, HTML5, CSS3, JavaScript</p>
+</footer>
+
+<script src="js/engine.js"></script>
+<script src="js/simulator.js"></script>
+<script>
+// Extra: sync statistics tab with simulation data
+document.querySelectorAll('.nav-links a').forEach(a => {
+  a.addEventListener('click', () => {
+    if (a.dataset.page === 'stats' && state.simulationResult) {
+      renderStatistics(state.simulationResult.statistics);
+      // Fill the stats-log-body table
+      const tbody = document.getElementById('stats-log-body');
+      if (tbody && state.events.length) {
+        tbody.innerHTML = state.events.map((ev, i) => {
+          const hp = ev.total_accesses ? (ev.hits / ev.total_accesses * 100).toFixed(1) : '0.0';
+          return `<tr>
+            <td>${i+1}</td>
+            <td class="text-mono">${ev.address}</td>
+            <td class="text-mono">${ev.block_number}</td>
+            <td class="text-mono">${ev.tag}</td>
+            <td class="text-mono">${ev.index}</td>
+            <td class="text-mono">${ev.offset}</td>
+            <td><span class="badge ${ev.hit?'badge-hit':ev.replacement?'badge-replace':'badge-miss'}">${ev.event_type}</span></td>
+            <td>${ev.total_accesses}</td>
+            <td>${ev.hits}</td>
+            <td>${ev.misses}</td>
+            <td>${hp}%</td>
+          </tr>`;
+        }).join('');
+      }
+    }
+    if (a.dataset.page === 'visualize') {
+      if (state.currentStep >= 0) updateStepView();
+    }
+  });
+});
+
+// loadPreset from About/Config page
+function loadPreset(cfg) {
+  applyConfigToForm(cfg);
+  state.config = cfg;
+  navigateTo('configure');
+}
+window.loadPreset = loadPreset;
+
+// wire sim-controls display
+document.getElementById('btn-run-sim')?.addEventListener('click', () => {
+  setTimeout(() => {
+    const ctrl = document.getElementById('sim-controls');
+    if (ctrl && state.events.length) ctrl.style.display = 'block';
+  }, 1500);
+});
+</script>
+</body>
+</html>

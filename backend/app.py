@@ -28,7 +28,8 @@ CPP_DIR    = os.path.join(os.path.dirname(os.path.dirname(__file__)), "cpp")
 CPP_BINARY = os.path.join(CPP_DIR, "cache_sim.exe")
 
 # ---- Frontend folder ----------------------------------------
-FRONTEND_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "frontend")
+ROOT_DIR     = os.path.dirname(os.path.dirname(__file__))
+FRONTEND_DIR = os.path.join(ROOT_DIR, "frontend") if os.path.isdir(os.path.join(ROOT_DIR, "frontend")) else ROOT_DIR
 
 
 # =============================================================

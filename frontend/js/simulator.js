@@ -38,43 +38,114 @@ function navigateTo(pageId) {
 }
 
 // ================================================================
-// API helpers
+// API helpers & Fallback Client Engine
 // ================================================================
+function executeClientGet(path) {
+  if (path === "/api/health") {
+    return { status: "ok", engine: "Client-Side Web Engine", client_mode: true };
+  }
+  if (path === "/api/sample") {
+    return { samples: window.CacheEngineJS ? window.CacheEngineJS.samples : [] };
+  }
+  if (path === "/api/algorithms") {
+    return {
+      mapping_techniques: [
+        { id: "direct", name: "Direct Mapping" },
+        { id: "fully_associative", name: "Fully Associative Mapping" },
+        { id: "set_associative", name: "Set Associative Mapping" },
+      ],
+      replacement_policies: [
+        { id: "lru", name: "LRU (Least Recently Used)" },
+        { id: "fifo", name: "FIFO (First In First Out)" },
+      ],
+    };
+  }
+  return { status: "ok" };
+}
+
+function executeClientPost(path, body) {
+  if (!window.CacheEngineJS) {
+    return { error: "Simulation engine not loaded." };
+  }
+  if (path === "/api/configure") {
+    const err = window.CacheEngineJS.validateConfig(body);
+    if (err) return { error: err, valid: false };
+    const derived = window.CacheEngineJS.computeDerived(body);
+    return { valid: true, config: derived };
+  }
+  if (path === "/api/simulate") {
+    return window.CacheEngineJS.runSimulation(body.config, body.addresses);
+  }
+  if (path === "/api/reset") {
+    return { status: "reset", message: "Simulation state cleared." };
+  }
+  return { status: "ok" };
+}
+
 async function apiGet(path) {
-  const res = await fetch(API_BASE + path);
-  return res.json();
+  if (!state.backendOk && window.location.hostname !== "127.0.0.1" && window.location.hostname !== "localhost") {
+    return executeClientGet(path);
+  }
+  try {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 1200);
+    const res = await fetch(API_BASE + path, { signal: controller.signal });
+    clearTimeout(timeout);
+    if (!res.ok) throw new Error("HTTP " + res.status);
+    return await res.json();
+  } catch (e) {
+    return executeClientGet(path);
+  }
 }
 
 async function apiPost(path, body) {
-  const res = await fetch(API_BASE + path, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(body),
-  });
-  return res.json();
+  if (!state.backendOk && window.location.hostname !== "127.0.0.1" && window.location.hostname !== "localhost") {
+    return executeClientPost(path, body);
+  }
+  try {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 1200);
+    const res = await fetch(API_BASE + path, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body),
+      signal: controller.signal,
+    });
+    clearTimeout(timeout);
+    if (!res.ok) throw new Error("HTTP " + res.status);
+    return await res.json();
+  } catch (e) {
+    return executeClientPost(path, body);
+  }
 }
 
 // ================================================================
 // Health check
 // ================================================================
 async function checkHealth() {
+  const el = document.getElementById("backend-status");
   try {
-    const data = await apiGet("/api/health");
-    state.backendOk = data.status === "ok";
-    const el = document.getElementById("backend-status");
-    if (el) {
-      el.textContent = state.backendOk
-        ? `✅ Backend connected (engine: ${data.engine})`
-        : "⚠️ Backend not responding";
-      el.className = state.backendOk ? "alert alert-success" : "alert alert-warning";
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 1000);
+    const res = await fetch(API_BASE + "/api/health", { signal: controller.signal });
+    clearTimeout(timeout);
+    if (res.ok) {
+      const data = await res.json();
+      state.backendOk = true;
+      if (el) {
+        el.textContent = `✅ Python Flask Backend Connected (Engine: ${data.engine})`;
+        el.className = "alert alert-success";
+      }
+      return;
     }
   } catch (e) {
-    state.backendOk = false;
-    const el = document.getElementById("backend-status");
-    if (el) {
-      el.textContent = "❌ Cannot connect to backend. Please run start_server.bat";
-      el.className = "alert alert-error";
-    }
+    // Backend offline – fallback to client-side engine
+  }
+
+  state.backendOk = false;
+  if (el) {
+    el.textContent = "🌐 Live Web Engine Active (Runs directly in browser — 100% Client-Side)";
+    el.className = "alert alert-success";
   }
 }
 

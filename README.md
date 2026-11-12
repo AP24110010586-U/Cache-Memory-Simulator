@@ -5,7 +5,13 @@ Computer Organization & Architecture
 
 ---
 
-## 🚀 Quick Start
+## 🌐 Live Web Demo
+Access the simulator instantly from anywhere without installing or running anything:
+👉 **[https://ap24110010586-u.github.io/Cache-Memory-Simulator/](https://ap24110010586-u.github.io/Cache-Memory-Simulator/)**
+
+---
+
+## 🚀 Local Quick Start
 
 ### 1. Start the Server
 
